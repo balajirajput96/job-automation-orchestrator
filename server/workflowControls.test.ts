@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { assertManualConfirmation, buildVerifiedRunRequest, RESUME_STORAGE_PATH, resolveHeartbeatActorSession } from "./workflowControls";
+import { assertManualConfirmation, buildVerifiedRunRequest, RESUME_STORAGE_PATH, resolveHeartbeatActorSession, VERIFIED_WORKFLOW_CONNECTORS } from "./workflowControls";
 import { permanentExclusion, scheduleBoundary } from "./workflowData";
 
 describe("verified job-search controls", () => {
@@ -15,6 +15,9 @@ describe("verified job-search controls", () => {
     expect(text.type).toBe("text");
     expect(text.text).toContain(permanentExclusion);
     expect(file).toEqual({ type: "file", file_url: `https://example.com${RESUME_STORAGE_PATH}` });
+    expect(request.message.connectors).toEqual(VERIFIED_WORKFLOW_CONNECTORS);
+    expect(VERIFIED_WORKFLOW_CONNECTORS).toContain("9444d960-ab7e-450f-9cb9-b9467fb0adda");
+    expect(VERIFIED_WORKFLOW_CONNECTORS).toContain("be268223-40b2-4f3c-a907-c12eb1699283");
   });
 
   it("uses the static project attachment path instead of embedding resume bytes in the task request", () => {

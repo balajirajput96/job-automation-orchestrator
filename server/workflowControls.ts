@@ -2,6 +2,10 @@ import { TRPCError } from "@trpc/server";
 import { workflowPolicy } from "./workflowData";
 
 export const RESUME_STORAGE_PATH = "/manus-storage/Production_Officer_Resume_10_July_2026_ed341bc1.pdf";
+export const VERIFIED_WORKFLOW_CONNECTORS = [
+  "9444d960-ab7e-450f-9cb9-b9467fb0adda", // Gmail
+  "be268223-40b2-4f3c-a907-c12eb1699283", // My Browser
+] as const;
 
 export function assertManualConfirmation(confirmed: boolean) {
   if (!confirmed) {
@@ -38,6 +42,7 @@ export function buildVerifiedRunRequest(resumeUrl: string) {
         { type: "text", text: workflowPolicy },
         { type: "file", file_url: resumeUrl },
       ],
+      connectors: VERIFIED_WORKFLOW_CONNECTORS,
     },
   };
 }

@@ -29,3 +29,6 @@
 - [x] Replace the ambiguous pending-migration schedule copy with an explicit read-only external-agent schedule boundary.
 - [x] Reconcile the Intas OSD Packing duplicate-protected no-send decision into the append-only audit and dashboard history.
 - [x] Ensure dashboard pause/resume targets the project-owned migrated Heartbeat with the correct actor identity.
+- [ ] Prove that a managed trigger preserves Gmail, browser research, résumé attachment, and verified-sending capabilities before retiring the original agent schedule.
+- [ ] Execute and verify one managed trigger end-to-end without creating overlapping job-search runs.
+- [ ] Verify the live authenticated dashboard pause/resume control against the final single schedule.
