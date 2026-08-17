@@ -364,6 +364,18 @@ export const applicationRecords = [
 ] as const;
 export const runRecords = [
   {
+    "id": "audit-run-10",
+    "label": "Verified Intas OSD Packing duplicate check — 17 August 2026",
+    "date": "17 Aug 2026 (IST)",
+    "reviewed": 1,
+    "sent": 0,
+    "decision": "The current Diploma/ITI OSD Packing route was eligible on stated experience but was not emailed because Gmail history confirmed a substantially similar 13 August Intas Production Officer / OSD Manufacturing application to the company’s Matoda HR/careers contacts.",
+    "sources": [
+      "https://www.instagram.com/jobinfobysuhani/reel/DcH1rpSykhv/",
+      "https://pharmabharat.com/intas-pharma-is-hiring-for-manufacturing-packing-qa-qc-and-engineering/"
+    ]
+  },
+  {
     "id": "audit-run-9",
     "label": "Verified production follow-up scan — 17 August 2026",
     "date": "17 Aug 2026 (IST)",
