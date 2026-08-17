@@ -364,6 +364,20 @@ export const applicationRecords = [
 ] as const;
 export const runRecords = [
   {
+    "id": "audit-run-9",
+    "label": "Verified production follow-up scan — 17 August 2026",
+    "date": "17 Aug 2026 (IST)",
+    "reviewed": 7,
+    "sent": 0,
+    "decision": "No new qualified non-duplicate recipient was identified. Aurobindo/APL and Amneal were duplicate or past-date; the other opportunities had verified qualification, seniority, role-specificity, or contact-clarity mismatches.",
+    "sources": [
+      "https://pharmabharat.com/aurobindo-pharma-is-hiring-for-production-packing-qc-qa/",
+      "https://pharmajobalert.in/walk-in-on-18th-aug-2026-for-qaqcproduction-at-v-ensure-pharma-technologies-pvt-ltd/",
+      "https://pharmajobalert.in/apcotex-industries-ltd-walk-in-on-august-18-2026-for-multiple-positions/",
+      "https://pharmajobalert.in/walk-in-on-august-18th-19th-2026-itidiplomabscb-commbab-pharmmpharmb-tech-at-vital-therapeutics-and-formulations-pvt-ltd/"
+    ]
+  },
+  {
     "id": "audit-run-8",
     "label": "Verified current Production / Biotechnology scan — 17 August 2026",
     "date": "17 Aug 2026 (IST)",
