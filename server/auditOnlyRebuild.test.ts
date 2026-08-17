@@ -7,6 +7,6 @@ describe("audit-only dashboard rebuild", () => {
       cwd: process.cwd(),
       encoding: "utf8",
     });
-    expect(output).toContain("Synchronized 39 application records");
+    expect(output).toContain("Synchronized 40 application records");
   });
 });

@@ -2,6 +2,15 @@
 export const auditSource = "/home/ubuntu/job_search_findings.md";
 export const applicationRecords = [
   {
+    "messageId": "1a010c6db3292828",
+    "sentAt": 1786987985000,
+    "employer": "Hetero Labs Limited – Unit VI",
+    "role": "Production – Injectables (Officer / Executive)",
+    "location": "Jadcherla, Telangana",
+    "recipient": "Sakhar.V@hetero.com",
+    "historicalExclusion": false
+  },
+  {
     "messageId": "19ffedc057899de8",
     "sentAt": 1786687259000,
     "employer": "APL Healthcare Limited – Unit IV",
@@ -354,6 +363,20 @@ export const applicationRecords = [
   }
 ] as const;
 export const runRecords = [
+  {
+    "id": "audit-run-6",
+    "label": "Verified production search and application run — 17 August 2026",
+    "date": "17 Aug 2026 (IST)",
+    "reviewed": 4,
+    "sent": 1,
+    "decision": "Hetero met the published Diploma and 2–8 year Production criteria with transparent OSD-versus-injectables disclosure. Concord and Viyash had qualification/experience mismatches, while MSN was past-date.",
+    "sources": [
+      "https://pharmabharat.org/concord-biotech-hiring-for-production-and-quality-control/",
+      "https://pharmabharat.org/viyash-scientific-limited-hiring-for-production/",
+      "https://pharmabharat.org/freshers-needed-in-production-at-msn-group/",
+      "https://pharmabharat.org/hetero-hiring-for-production-quality-assurance-quality-control/"
+    ]
+  },
   {
     "id": "audit-run-1",
     "label": "Scheduled verified run — 15 August 2026 (additional scan)",

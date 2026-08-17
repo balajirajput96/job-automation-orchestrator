@@ -50,25 +50,32 @@ const rowToRecord = line => {
   return { messageId, sentAt: Number(sentAt), employer, role, location, recipient, historicalExclusion: recipient.toLowerCase().includes("aman.kumar@elysiumpharma.com") };
 };
 
-const getReconciledApplications = markdown => {
-  const opening = `${reconciliationMarker}\n\`\`\`json\n`;
-  const start = markdown.indexOf(opening);
-  if (start < 0) throw new Error("The append-only audit does not yet contain reconciled Gmail application records.");
-  const contentStart = start + opening.length;
-  const end = markdown.indexOf("\n\`\`\`", contentStart);
-  if (end < 0) throw new Error("The reconciled Gmail record block is incomplete.");
-  return JSON.parse(markdown.slice(contentStart, end));
+const getAppendedAuditRecords = (markdown, marker, recordType) => {
+  const opening = `${marker}\n\`\`\`json\n`;
+  const blocks = [];
+  let cursor = 0;
+
+  while (true) {
+    const start = markdown.indexOf(opening, cursor);
+    if (start < 0) break;
+
+    const contentStart = start + opening.length;
+    const end = markdown.indexOf("\n\`\`\`", contentStart);
+    if (end < 0) throw new Error(`The ${recordType} record block is incomplete.`);
+
+    blocks.push(JSON.parse(markdown.slice(contentStart, end)));
+    cursor = end + 4;
+  }
+
+  if (!blocks.length) throw new Error(`The append-only audit does not yet contain ${recordType} records.`);
+  return blocks.reverse().flat();
 };
 
-const getReconciledRunHistory = markdown => {
-  const opening = `${runHistoryMarker}\n\`\`\`json\n`;
-  const start = markdown.indexOf(opening);
-  if (start < 0) throw new Error("The append-only audit does not yet contain normalized run-history records.");
-  const contentStart = start + opening.length;
-  const end = markdown.indexOf("\n\`\`\`", contentStart);
-  if (end < 0) throw new Error("The normalized run-history record block is incomplete.");
-  return JSON.parse(markdown.slice(contentStart, end));
-};
+const getReconciledApplications = markdown =>
+  getAppendedAuditRecords(markdown, reconciliationMarker, "reconciled Gmail application");
+
+const getReconciledRunHistory = markdown =>
+  getAppendedAuditRecords(markdown, runHistoryMarker, "normalized run-history");
 
 let audit = await readFile(auditPath, "utf8");
 if (!audit.includes(reconciliationMarker)) {
