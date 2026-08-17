@@ -12,6 +12,21 @@ export function assertManualConfirmation(confirmed: boolean) {
   }
 }
 
+export function resolveHeartbeatActorSession({
+  requestOpenId,
+  ownerOpenId,
+  sessionToken,
+}: {
+  requestOpenId: string;
+  ownerOpenId?: string;
+  sessionToken: string;
+}) {
+  // Project-level Heartbeats are created under the owner identity. Calling the
+  // SDK with an empty session retains that actor instead of rebinding to a
+  // browser session, while non-owner schedules still use the user session.
+  return ownerOpenId && requestOpenId === ownerOpenId ? "" : sessionToken;
+}
+
 export function buildVerifiedRunRequest(resumeUrl: string) {
   return {
     title: "Verified Production Officer Job Search — Manual Run",
@@ -46,4 +61,3 @@ export async function startVerifiedRun({ apiKey, confirmed, resumeUrl }: { apiKe
   }
   return { taskId: result.task_id, taskUrl: result.task_url ?? "" };
 }
-

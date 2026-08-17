@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { assertManualConfirmation, buildVerifiedRunRequest, RESUME_STORAGE_PATH } from "./workflowControls";
+import { assertManualConfirmation, buildVerifiedRunRequest, RESUME_STORAGE_PATH, resolveHeartbeatActorSession } from "./workflowControls";
 import { permanentExclusion, scheduleBoundary } from "./workflowData";
 
 describe("verified job-search controls", () => {
@@ -25,5 +25,10 @@ describe("verified job-search controls", () => {
     expect(scheduleBoundary.controlMode).toBe("external-agent-read-only");
     expect(scheduleBoundary.description).toMatch(/Gmail, web-research and résumé-attachment capabilities/i);
     expect(scheduleBoundary.description).toMatch(/no duplicate/i);
+  });
+
+  it("uses the project-owner actor for dashboard control of a project-owned Heartbeat", () => {
+    expect(resolveHeartbeatActorSession({ requestOpenId: "owner", ownerOpenId: "owner", sessionToken: "browser-session" })).toBe("");
+    expect(resolveHeartbeatActorSession({ requestOpenId: "member", ownerOpenId: "owner", sessionToken: "browser-session" })).toBe("browser-session");
   });
 });

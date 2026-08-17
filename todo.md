@@ -28,3 +28,4 @@
 - [x] Reconcile the latest verified no-send production scan into the append-only audit and dashboard history.
 - [x] Replace the ambiguous pending-migration schedule copy with an explicit read-only external-agent schedule boundary.
 - [x] Reconcile the Intas OSD Packing duplicate-protected no-send decision into the append-only audit and dashboard history.
+- [x] Ensure dashboard pause/resume targets the project-owned migrated Heartbeat with the correct actor identity.

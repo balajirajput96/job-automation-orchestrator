@@ -3,12 +3,13 @@ import { TRPCError } from "@trpc/server";
 import { z } from "zod";
 import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
+import { ENV } from "./_core/env";
 import { updateHeartbeatJob } from "./_core/heartbeat";
 import { systemRouter } from "./_core/systemRouter";
 import { protectedProcedure, publicProcedure, router } from "./_core/trpc";
 import { appendWorkflowControlEvent, getWorkflowSetting, listWorkflowControlEvents, saveWorkflowSetting } from "./db";
 import { applicationRecords, auditSource, candidateProfile, integrations, permanentExclusion, runRecords, scheduleBoundary } from "./workflowData";
-import { RESUME_STORAGE_PATH, startVerifiedRun } from "./workflowControls";
+import { RESUME_STORAGE_PATH, resolveHeartbeatActorSession, startVerifiedRun } from "./workflowControls";
 
 function requestOrigin(req: { protocol?: string; headers: { host?: string } }) {
   if (!req.headers.host) throw new Error("Unable to resolve dashboard host for resume attachment.");
@@ -46,7 +47,12 @@ export const appRouter = router({
       if (!heartbeatTaskUid) {
         throw new TRPCError({ code: "PRECONDITION_FAILED", message: "Schedule migration is pending. The existing twice-daily workflow remains active until it is migrated after deployment." });
       }
-      await updateHeartbeatJob(heartbeatTaskUid, { enable: input.enabled }, sessionToken);
+      const heartbeatActorSession = resolveHeartbeatActorSession({
+        requestOpenId: ctx.user.openId,
+        ownerOpenId: ENV.ownerOpenId,
+        sessionToken,
+      });
+      await updateHeartbeatJob(heartbeatTaskUid, { enable: input.enabled }, heartbeatActorSession);
       const result = await saveWorkflowSetting(ctx.user.openId, input.enabled, heartbeatTaskUid);
       await appendWorkflowControlEvent(ctx.user.openId, "schedule-toggle", input.enabled ? "enabled" : "disabled", `Heartbeat ${heartbeatTaskUid} ${input.enabled ? "resumed" : "paused"}.`);
       return result;
