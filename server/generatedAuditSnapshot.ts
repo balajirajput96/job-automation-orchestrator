@@ -364,6 +364,21 @@ export const applicationRecords = [
 ] as const;
 export const runRecords = [
   {
+    "id": "audit-run-8",
+    "label": "Verified current Production / Biotechnology scan — 17 August 2026",
+    "date": "17 Aug 2026 (IST)",
+    "reviewed": 10,
+    "sent": 0,
+    "decision": "No new qualified non-duplicate email recipient was identified. The reviewed roles had a stated education, experience, functional-fit, or application-clarity mismatch; no eligibility was inferred for the Diploma in Biotechnology.",
+    "sources": [
+      "https://pharmabharat.org/lupin-hiring-for-quality-control-production/",
+      "https://pharmabharat.org/aspiro-pharma-hiring-for-production-instrumentation-and-engineering/",
+      "https://pharmabharat.org/usv-hiring-for-production-quality-control-engineering/",
+      "https://pharmacareer.in/rusan-pharma-ltd-is-looking-for-enthusiastic-fresher-and-experienced/",
+      "https://pharmacareer.in/urgent-walk-in-freshers-experience-for-multiple-positions-at-smith-kenner-pharmaceuticals-pvt-ltd/"
+    ]
+  },
+  {
     "id": "audit-run-7",
     "label": "Verified current-vacancy scan — 17 August 2026",
     "date": "17 Aug 2026 (IST)",

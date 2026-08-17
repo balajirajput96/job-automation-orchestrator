@@ -21,3 +21,7 @@
 - [x] Correct the audit-run parser so reviewed counts, sent counts, and no-send rationale render from the append-only audit rather than fallback values.
 - [x] Support appended machine-readable audit blocks so newly verified sends and runs appear in the dashboard without rewriting prior audit evidence.
 - [x] Reconcile the current verified no-send job-search run into the append-only audit and dashboard history.
+- [x] Verify and, if needed, correct dashboard rendering so the latest appended run-history record is visible.
+- [ ] Authenticate into the dashboard and verify that the latest appended run-history record is visibly rendered.
+- [x] Reconcile the current verified no-send vacancy scan into the append-only audit and dashboard history.
+- [x] Reconcile the current verified no-send vacancy scan into the append-only audit and dashboard history.
