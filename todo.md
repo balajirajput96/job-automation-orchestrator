@@ -20,3 +20,4 @@
 - [ ] After publishing, migrate the existing active twice-daily schedule to the dashboard-managed Heartbeat before enabling live pause/resume controls.
 - [x] Correct the audit-run parser so reviewed counts, sent counts, and no-send rationale render from the append-only audit rather than fallback values.
 - [x] Support appended machine-readable audit blocks so newly verified sends and runs appear in the dashboard without rewriting prior audit evidence.
+- [x] Reconcile the current verified no-send job-search run into the append-only audit and dashboard history.

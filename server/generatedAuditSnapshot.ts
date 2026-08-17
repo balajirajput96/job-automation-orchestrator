@@ -364,6 +364,20 @@ export const applicationRecords = [
 ] as const;
 export const runRecords = [
   {
+    "id": "audit-run-7",
+    "label": "Verified current-vacancy scan — 17 August 2026",
+    "date": "17 Aug 2026 (IST)",
+    "reviewed": 4,
+    "sent": 0,
+    "decision": "Lincoln and Akums had qualification mismatch, Bharat Biotech’s accessible criteria did not establish an Officer-level Diploma route, and Sri Krishna was past-date. No qualified non-duplicate email recipient was identified.",
+    "sources": [
+      "https://www.facebook.com/LincolnPharmaceuticalsLimited/posts/-hiring-alert-walk-in-intervieware-you-an-experienced-qa-qc-or-production-profes/1368531012061188/",
+      "https://www.instagram.com/reel/DcGl0xgSnPB/",
+      "https://www.instagram.com/reel/DcBTGMdJZyP/",
+      "https://www.instagram.com/hiring_updateinfo/reel/Db8s2xzpKTH/"
+    ]
+  },
+  {
     "id": "audit-run-6",
     "label": "Verified production search and application run — 17 August 2026",
     "date": "17 Aug 2026 (IST)",
