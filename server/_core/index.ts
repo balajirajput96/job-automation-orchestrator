@@ -7,6 +7,7 @@ import { registerOAuthRoutes } from "./oauth";
 import { registerStorageProxy } from "./storageProxy";
 import { appRouter } from "../routers";
 import { createContext } from "./context";
+import { runHeartbeatProbe } from "../heartbeatProbe";
 import { runScheduledJobSearch } from "../scheduledJobSearch";
 import { serveStatic, setupVite } from "./vite";
 
@@ -24,6 +25,7 @@ async function startServer() {
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
   registerStorageProxy(app);
   registerOAuthRoutes(app);
+  app.post("/api/scheduled/heartbeat-probe", runHeartbeatProbe);
   app.post("/api/scheduled/verified-job-search", runScheduledJobSearch);
   app.use("/api/trpc", createExpressMiddleware({ router: appRouter, createContext }));
   if (process.env.NODE_ENV === "development") await setupVite(app, server); else serveStatic(app);
