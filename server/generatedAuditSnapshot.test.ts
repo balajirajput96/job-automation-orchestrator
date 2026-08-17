@@ -9,8 +9,9 @@ describe("generated audit snapshot", () => {
   });
 
   it("includes audited scheduled-run history with real source URLs", () => {
-    expect(runRecords.length).toBeGreaterThan(0);
+    expect(runRecords).toHaveLength(5);
     expect(runRecords.every(run => run.sources.length > 0)).toBe(true);
-    expect(runRecords.some(run => run.reviewed > 0)).toBe(true);
+    expect(runRecords.map(run => run.reviewed)).toEqual([4, 4, 5, 4, 7]);
+    expect(runRecords.map(run => run.sent)).toEqual([0, 0, 0, 2, 1]);
   });
 });

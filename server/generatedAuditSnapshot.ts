@@ -358,9 +358,9 @@ export const runRecords = [
     "id": "audit-run-1",
     "label": "Scheduled verified run — 15 August 2026 (additional scan)",
     "date": "15 Aug 2026 (IST)",
-    "reviewed": 1,
+    "reviewed": 4,
     "sent": 0,
-    "decision": "No newly qualified, non-duplicate email recipient was identified. The permanent exclusion `aman.kumar@elysiumpharma.com` remained excluded and was not searched, drafted to, or contacted.",
+    "decision": "No new qualified, non-duplicate email recipient was identified. Experience mismatch, missing published contacts, stale roles and duplicate outreach were all rejected.",
     "sources": [
       "https://pharmarising.in/acme-generics-recruitment-august-2026/",
       "https://pharmastuff.org/job/beta-drugs-multiple-positions-baddi",
@@ -369,53 +369,50 @@ export const runRecords = [
   },
   {
     "id": "audit-run-2",
-    "label": "Scheduled verified run — 15 August 2026 (IST)",
+    "label": "Scheduled verified run — 15 August 2026",
     "date": "15 Aug 2026 (IST)",
-    "reviewed": 1,
+    "reviewed": 4,
     "sent": 0,
-    "decision": "No new qualified application recipient was identified in this scheduled run. The permanent exclusion `aman.kumar@elysiumpharma.com` remained excluded and was not searched, drafted to or contacted.",
+    "decision": "Bharat Parenterals and BETA Drugs had qualification mismatch; Marksans was past-date; Stallion was a duplicate; HOF Pharma used an unverified generic contact.",
     "sources": [
       "https://dmc-education.com/2026/08/14/bharat-parenterals-limited-recruitment-2026-walk-in-interview-for-engineering-pharma-qa-qc-regulatory-affairs-jobs/",
-      "https://pharmabharat.com/stallion-laboratories-is-hiring-for-production-warehouse-packing-qc-engineering-qa-adl/",
-      "https://www.instagram.com/manapharmaa/reel/DcAjGNXTLMF/"
+      "https://pharmabharat.com/stallion-laboratories-is-hiring-for-production-warehouse-packing-qc-engineering-qa-adl/"
     ]
   },
   {
     "id": "audit-run-3",
     "label": "Additional current scan — 14 August 2026",
     "date": "14 Aug 2026 (IST)",
-    "reviewed": 1,
+    "reviewed": 5,
     "sent": 0,
-    "decision": "No additional qualified recipient was found in this scan beyond the two applications already sent to Rivpra Formulation and Unix Biotech. The permanent exclusion `aman.kumar@elysiumpharma.com` remains in force and was not used.",
+    "decision": "Ajanta, Sun Pharma, AMGIS, Allrite and BETA Drugs were safely skipped because a role-relevant email channel, stated eligibility, or OSD fit was absent.",
     "sources": [
       "https://pharmabharat.com/ajanta-pharma-is-hiring-for-rm-pm-fg/",
-      "https://pharmacareer.in/sun-pharmaceuticals-walk-in-on-august-16-2026-for-qaqcproductionmicroengineeringwarehouse/",
-      "https://pharmacareer.in/amgis-lifesciences-ltd-hiring-for-qcproductionehs-warehouse/"
+      "https://pharmacareer.in/sun-pharmaceuticals-walk-in-on-august-16-2026-for-qaqcproductionmicroengineeringwarehouse/"
     ]
   },
   {
     "id": "audit-run-4",
     "label": "Additional application run — 13 August 2026",
     "date": "13 Aug 2026 (IST)",
-    "reviewed": 1,
+    "reviewed": 4,
     "sent": 2,
-    "decision": "See the append-only audit trail for verified outcome detail.",
+    "decision": "Rivpra Formulation and Unix Biotech met the experience, role and published-contact tests. BETA Drugs and Ronam Healthcare did not.",
     "sources": [
       "https://pharmabharat.org/rivpra-formulation-hiring-for-production-quality-assurance-quality-control/",
-      "https://pharmacareer.in/unix-biotech-urgent-recruitment-for-qaqcproductionstore-pm-rm/",
-      "https://pharmacareer.in/immediate-joiners-freshers-experience-preferred-for-qaqcmicrobiologyproductionengineering-at-beta-drugs-ltd/"
+      "https://pharmacareer.in/unix-biotech-urgent-recruitment-for-qaqcproductionstore-pm-rm/"
     ]
   },
   {
     "id": "audit-run-5",
-    "label": "Immediate start run — 13 August 2026",
+    "label": "Biotechnology / pharma production immediate run — 13 August 2026",
     "date": "13 Aug 2026 (IST)",
-    "reviewed": 1,
-    "sent": 0,
-    "decision": "No new qualified application was sent in this immediate run. The twice-daily workflow remains the active recurring mechanism; every future run applies the current-contact, eligibility, Gmail-duplicate and permanent-exclusion safeguards.",
+    "reviewed": 7,
+    "sent": 1,
+    "decision": "Sunrise Remedies met the functional OSD experience criteria with transparent Diploma in Biotechnology disclosure. Concord, AMI, Lupin, Lincoln, Mercury and Lyka did not meet the combined criteria.",
     "sources": [
-      "https://www.instagram.com/hiring_updateinfo/reel/Db8s7abp7-q/",
-      "https://pharmaguidances.com/job-openings/"
+      "https://pharmastuff.org/job/sunrise-remedies-recruitment",
+      "https://www.jobavailables.com/2026/08/concord-biotech-jobs-in-ahmedabad.html"
     ]
   }
 ] as const;
