@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { assertManualConfirmation, buildVerifiedRunRequest, RESUME_STORAGE_PATH } from "./workflowControls";
-import { permanentExclusion } from "./workflowData";
+import { permanentExclusion, scheduleBoundary } from "./workflowData";
 
 describe("verified job-search controls", () => {
   it("requires an explicit confirmation before a manual run can be created", () => {
@@ -19,5 +19,11 @@ describe("verified job-search controls", () => {
 
   it("uses the static project attachment path instead of embedding resume bytes in the task request", () => {
     expect(RESUME_STORAGE_PATH).toMatch(/^\/manus-storage\/Production_Officer_Resume_10_July_2026_/);
+  });
+
+  it("declares the retained agent schedule as read-only to prevent a duplicate replacement", () => {
+    expect(scheduleBoundary.controlMode).toBe("external-agent-read-only");
+    expect(scheduleBoundary.description).toMatch(/Gmail, web-research and résumé-attachment capabilities/i);
+    expect(scheduleBoundary.description).toMatch(/no duplicate/i);
   });
 });

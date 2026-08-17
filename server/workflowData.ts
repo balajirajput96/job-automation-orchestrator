@@ -25,6 +25,12 @@ export const candidateProfile = {
   availability: "Immediate joiner",
 } as const;
 
+export const scheduleBoundary = {
+  controlMode: "external-agent-read-only",
+  label: "Agent scheduled",
+  description: "The active 09:00 and 17:00 IST agent workflow retains Gmail, web-research and résumé-attachment capabilities. Dashboard pause/resume controls stay unavailable so no duplicate or weaker replacement schedule is created.",
+} as const;
+
 export const workflowPolicy = `Twice daily, find current Production Officer, Manufacturing Officer, Biotechnology Production, Bioprocess, Manufacturing Trainee, and walk-in opportunities, prioritizing Vadodara and nearby locations, then Ankleshwar/Bharuch, Ahmedabad, Mumbai, and the rest of India. Include suitable entry-level or fresher-eligible biotechnology/pharma production roles only where the stated qualification or transferable experience makes the candidate reasonably eligible. Use web sources and public Instagram/Facebook posts only for research. Do not attempt Instagram or Facebook direct messages.
 
 Candidate: Balaji Dilipsingh Rajput; 2+ years Production Officer Grade-1 experience in tablet compression and OSD; Diploma in Biotechnology; immediate joiner; expected CTC negotiable. Apply by Gmail only when a current, role-relevant job posting explicitly publishes a company/HR/recruiter application email and it is independently verifiable from an employer or credible source. Never email inferred, generic-without-vacancy, unrelated, stale, bulk-sourced, or unclear contacts; do not use a fixed contact-volume quota.

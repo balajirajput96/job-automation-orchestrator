@@ -26,3 +26,4 @@
 - [x] Reconcile the current verified no-send vacancy scan into the append-only audit and dashboard history.
 - [x] Reconcile the current verified no-send vacancy scan into the append-only audit and dashboard history.
 - [x] Reconcile the latest verified no-send production scan into the append-only audit and dashboard history.
+- [x] Replace the ambiguous pending-migration schedule copy with an explicit read-only external-agent schedule boundary.

@@ -7,7 +7,7 @@ import { updateHeartbeatJob } from "./_core/heartbeat";
 import { systemRouter } from "./_core/systemRouter";
 import { protectedProcedure, publicProcedure, router } from "./_core/trpc";
 import { appendWorkflowControlEvent, getWorkflowSetting, listWorkflowControlEvents, saveWorkflowSetting } from "./db";
-import { applicationRecords, auditSource, candidateProfile, integrations, permanentExclusion, runRecords } from "./workflowData";
+import { applicationRecords, auditSource, candidateProfile, integrations, permanentExclusion, runRecords, scheduleBoundary } from "./workflowData";
 import { RESUME_STORAGE_PATH, startVerifiedRun } from "./workflowControls";
 
 function requestOrigin(req: { protocol?: string; headers: { host?: string } }) {
@@ -33,7 +33,7 @@ export const appRouter = router({
       exclusion: permanentExclusion,
       auditSource,
       controlEvents: await listWorkflowControlEvents(ctx.user.openId),
-      schedule: { timeOne: "09:00 IST", timeTwo: "17:00 IST", expiry: "13 Oct 2026", status: "active", lastRun: "17 Aug 2026, 17:06 IST", nextRun: "09:00 IST / 17:00 IST daily" },
+      schedule: { timeOne: "09:00 IST", timeTwo: "17:00 IST", expiry: "13 Oct 2026", status: "active", lastRun: "17 Aug 2026, 17:06 IST", nextRun: "09:00 IST / 17:00 IST daily", ...scheduleBoundary },
     })),
     settings: protectedProcedure.query(async ({ ctx }) => getWorkflowSetting(ctx.user.openId)),
     setScheduleEnabled: protectedProcedure.input(z.object({ enabled: z.boolean() })).mutation(async ({ ctx, input }) => {

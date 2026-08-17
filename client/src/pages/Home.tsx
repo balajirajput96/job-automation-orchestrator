@@ -52,6 +52,7 @@ export default function Home() {
   }
   const scheduleEnabled = settings.data?.isEnabled ?? true;
   const scheduleManaged = Boolean(settings.data?.heartbeatTaskUid);
+  const isExternalAgentSchedule = data.schedule.controlMode === "external-agent-read-only" && !scheduleManaged;
 
   return (
     <div className="app-shell">
@@ -100,11 +101,11 @@ export default function Home() {
 
           <aside>
             <article className="panel schedule-card" id="schedule">
-              <div className="panel-head"><div><h2 className="panel-title">Scheduled run configuration</h2><p className="panel-copy">Twice-daily verified search and application cadence.</p></div><span className="pill">{scheduleEnabled ? "Enabled" : "Disabled"}</span></div>
+              <div className="panel-head"><div><h2 className="panel-title">Scheduled run configuration</h2><p className="panel-copy">Twice-daily verified search and application cadence.</p></div><span className="pill">{isExternalAgentSchedule ? data.schedule.label : scheduleEnabled ? "Enabled" : "Disabled"}</span></div>
               <div className="schedule-time"><strong>09:00 IST</strong><span>Daily research + verified applications</span></div>
               <div className="schedule-time"><strong>17:00 IST</strong><span>Daily research + verified applications</span></div>
               <div className="schedule-time"><strong>13 Oct 2026</strong><span>Schedule expiry date</span></div>
-              <div className="control-row"><div><div style={{ color: "#eaf1e2", fontWeight: 600, fontSize: 13 }}>Schedule control</div><div className="panel-copy">{scheduleManaged ? "Protected live pause/resume control." : "Migration pending. Existing schedule remains active."}</div></div><button className="toggle" data-on={scheduleEnabled} disabled={!scheduleManaged} onClick={() => scheduleMutation.mutate({ enabled: !scheduleEnabled })} aria-label="Toggle schedule" style={{ opacity: scheduleManaged ? 1 : .45, cursor: scheduleManaged ? "pointer" : "not-allowed" }}><span className="toggle-knob" /></button></div>
+              <div className="control-row"><div><div style={{ color: "#eaf1e2", fontWeight: 600, fontSize: 13 }}>{isExternalAgentSchedule ? "Schedule boundary" : "Schedule control"}</div><div className="panel-copy">{isExternalAgentSchedule ? data.schedule.description : scheduleManaged ? "Protected live pause/resume control." : "Schedule control is unavailable until a safe managed task is configured."}</div></div><button className="toggle" data-on={scheduleEnabled} disabled={!scheduleManaged} onClick={() => scheduleMutation.mutate({ enabled: !scheduleEnabled })} aria-label={isExternalAgentSchedule ? "External agent schedule is read-only" : "Toggle schedule"} style={{ opacity: scheduleManaged ? 1 : .45, cursor: scheduleManaged ? "pointer" : "not-allowed" }}><span className="toggle-knob" /></button></div>
               <button className="trigger" onClick={() => setDialogOpen(true)}><Play size={14} style={{ display: "inline", verticalAlign: -2, marginRight: 7 }} />Initiate verified job-search run</button>
             </article>
 
