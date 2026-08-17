@@ -2,6 +2,15 @@
 export const auditSource = "/home/ubuntu/job_search_findings.md";
 export const applicationRecords = [
   {
+    "messageId": "1a0111920e98ccaf",
+    "sentAt": 1786993314000,
+    "employer": "Synokem Lifesciences Pvt. Ltd.",
+    "role": "Production Officer / Senior Officer – Granulation",
+    "location": "SIDCUL, Haridwar, Uttarakhand",
+    "recipient": "jobs@synokempharma.com",
+    "historicalExclusion": false
+  },
+  {
     "messageId": "1a010c6db3292828",
     "sentAt": 1786987985000,
     "employer": "Hetero Labs Limited – Unit VI",
@@ -363,6 +372,18 @@ export const applicationRecords = [
   }
 ] as const;
 export const runRecords = [
+  {
+    "id": "audit-run-11",
+    "label": "Verified production and biotech follow-up run — 17 August 2026",
+    "date": "17 Aug 2026 (IST)",
+    "reviewed": 2,
+    "sent": 1,
+    "decision": "Synokem’s current Granulation Officer/Sr. Officer route met the stated 2–4 year experience criterion and had no Gmail duplicate; the application disclosed the Diploma in Biotechnology because formal qualification was unclear. USV Production roles required 10–12 years at Assistant Manager level.",
+    "sources": [
+      "https://pharmabharat.com/synokem-lifesciences-is-hiring-for-engineering-production-and-quality-control/",
+      "https://pharmabharat.org/usv-hiring-for-production-quality-control-engineering/"
+    ]
+  },
   {
     "id": "audit-run-10",
     "label": "Verified Intas OSD Packing duplicate check — 17 August 2026",

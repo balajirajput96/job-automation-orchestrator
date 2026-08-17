@@ -32,4 +32,5 @@
 - [ ] Prove that a managed trigger preserves Gmail, browser research, résumé attachment, and verified-sending capabilities before retiring the original agent schedule.
 - [ ] Execute and verify one managed trigger end-to-end without creating overlapping job-search runs.
 - [ ] Verify the live authenticated dashboard pause/resume control against the final single schedule.
-- [ ] Diagnose managed Heartbeat dispatch with a non-destructive callback probe before attempting another migration.
+- [x] Diagnose managed Heartbeat dispatch with a non-destructive callback probe before attempting another migration.
+- [x] Reconcile the verified Synokem Production–Granulation application and current scan into the audit and dashboard history.
