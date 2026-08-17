@@ -1,0 +1,20 @@
+# Project TODO
+
+- [x] Define the verified workflow dashboard data model and typed backend contract.
+- [x] Import and normalize sent-application and run-history data from the append-only workflow audit.
+- [x] Build the dashboard overview with total applications, last run, next run, and active status.
+- [x] Build the sent-application log table with employer, role, location, recipient email, sent time, and Gmail message ID.
+- [x] Build the run-history feed with reviewed counts, sent counts, no-send rationale, and source URLs.
+- [x] Build the twice-daily IST schedule panel with 09:00 IST, 17:00 IST, 13 Oct 2026 expiry, and an enabled/disabled control.
+- [x] Build the integration-status panel for Gmail, GitHub, Julius AI, Google Workspace, and Antigravity CLI.
+- [x] Display the permanent exclusion aman.kumar@elysiumpharma.com as a non-dismissible, visually distinct absolute restriction.
+- [x] Build the candidate profile card with the exact supplied profile details.
+- [x] Implement an immediate-run confirmation dialog that never executes without a deliberate confirmation step.
+- [x] Enforce server-side schedule-toggle and manual-run safety checks with an auditable outcome.
+- [x] Add Vitest coverage for dashboard workflow controls and source-data normalization.
+- [x] Save the final release checkpoint after final visual verification.
+- [x] Reconcile every Gmail application record into the append-only job-search audit and generate the dashboard snapshot from that audit source.
+- [x] Add persistent audit outcomes for dashboard schedule changes and manual-run task initiation.
+- [x] Clarify the current schedule-control boundary while retaining the existing active external twice-daily schedule.
+- [x] Persist all reconciled Gmail application records inside the append-only audit and rebuild the dashboard snapshot from that audit alone.
+- [ ] After publishing, migrate the existing active twice-daily schedule to the dashboard-managed Heartbeat before enabling live pause/resume controls.
