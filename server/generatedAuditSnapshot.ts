@@ -2,6 +2,24 @@
 export const auditSource = "/home/ubuntu/job_search_findings.md";
 export const applicationRecords = [
   {
+    "messageId": "1a012f040cfc7eb8",
+    "sentAt": 1787024100000,
+    "employer": "Viyash Scientific Limited Unit-V",
+    "role": "Production Chemist / Junior Chemist",
+    "location": "Jeedimetla, Telangana",
+    "recipient": "kuladeep.m@viyash.com",
+    "historicalExclusion": false
+  },
+  {
+    "messageId": "1a012f1714b87941",
+    "sentAt": 1787024160000,
+    "employer": "Ichor Biologics Pvt. Ltd.",
+    "role": "Production – Downstream (DS)",
+    "location": "Thurkapally, Shameerpet, Telangana",
+    "recipient": "careers@ichor.in",
+    "historicalExclusion": false
+  },
+  {
     "messageId": "1a0111920e98ccaf",
     "sentAt": 1786993314000,
     "employer": "Synokem Lifesciences Pvt. Ltd.",
@@ -372,6 +390,19 @@ export const applicationRecords = [
   }
 ] as const;
 export const runRecords = [
+  {
+    "id": "audit-run-12",
+    "label": "Verified Production and Biotechnology run — 18 August 2026",
+    "date": "18 Aug 2026 (IST)",
+    "reviewed": 9,
+    "sent": 2,
+    "decision": "Two independently corroborated, currently open production routes were sent after clean Gmail duplicate checks: Viyash Unit-V Production and Ichor Biologics Production–Downstream. Both emails disclosed the candidate’s Diploma in Biotechnology because the postings specify different formal qualifications. Lupin, Sunrise, SunGlow, Lincoln, Zydus, Ipca, and InvaGen were safely skipped for experience/qualification mismatch, duplicate protection, missing email route, incomplete evidence, past date, or geography.",
+    "sources": [
+      "https://pharmabharat.org/viyash-scientific-limited-hiring-for-production/",
+      "https://pharmabharat.org/freshers-needed-in-qc-microbiology-production-downstream-at-ichor-biologics-pvt-ltd/",
+      "https://pharmabharat.org/lupin-hiring-for-quality-control-production/"
+    ]
+  },
   {
     "id": "audit-run-11",
     "label": "Verified production and biotech follow-up run — 17 August 2026",

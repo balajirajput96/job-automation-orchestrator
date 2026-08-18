@@ -47,3 +47,7 @@
 - [x] Commit the refreshed repair tracker, verify its GitHub CI run, then capture a clean post-pass rebase status.
 - [x] Resolve the local Corepack signature failure for the pnpm-pinned validation path and rerun the complete local suite.
 - [x] Re-audit current remote state and GitHub CI, then retain a clean rebase only if no new code-controlled blocker exists.
+- [x] Verify the retained twice-daily workflow boundary and research the current prioritized Production/Manufacturing/Biotechnology vacancy set.
+- [x] Apply only to new, current, independently verified, role-relevant postings after Gmail duplicate checks and permanent-exclusion screening.
+- [x] Append every reviewed outcome to the workflow audits and regenerate the dashboard snapshot for this run.
+- [x] Update audit snapshot regression expectations for the verified 43-application, 12-run dataset and rerun validation.
