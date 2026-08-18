@@ -46,3 +46,4 @@
 - [x] Repair any newly found code-controlled failure, rerun local validation, and verify the latest GitHub CI run passes.
 - [x] Commit the refreshed repair tracker, verify its GitHub CI run, then capture a clean post-pass rebase status.
 - [x] Resolve the local Corepack signature failure for the pnpm-pinned validation path and rerun the complete local suite.
+- [x] Re-audit current remote state and GitHub CI, then retain a clean rebase only if no new code-controlled blocker exists.
