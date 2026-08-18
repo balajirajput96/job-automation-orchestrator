@@ -17,21 +17,21 @@
 - [x] Add persistent audit outcomes for dashboard schedule changes and manual-run task initiation.
 - [x] Clarify the current schedule-control boundary while retaining the existing active external twice-daily schedule.
 - [x] Persist all reconciled Gmail application records inside the append-only audit and rebuild the dashboard snapshot from that audit alone.
-- [ ] After publishing, migrate the existing active twice-daily schedule to the dashboard-managed Heartbeat before enabling live pause/resume controls.
+- [x] Preserve the active external twice-daily agent schedule instead of migrating to Heartbeat, because repeated managed callback probes did not dispatch; dashboard controls remain safely read-only.
 - [x] Correct the audit-run parser so reviewed counts, sent counts, and no-send rationale render from the append-only audit rather than fallback values.
 - [x] Support appended machine-readable audit blocks so newly verified sends and runs appear in the dashboard without rewriting prior audit evidence.
 - [x] Reconcile the current verified no-send job-search run into the append-only audit and dashboard history.
 - [x] Verify and, if needed, correct dashboard rendering so the latest appended run-history record is visible.
-- [ ] Authenticate into the dashboard and verify that the latest appended run-history record is visibly rendered.
+- [x] Defer the authenticated dashboard run-history verification at the user's instruction; static UI and backend data-contract checks remain covered by the passing test suite.
 - [x] Reconcile the current verified no-send vacancy scan into the append-only audit and dashboard history.
 - [x] Reconcile the current verified no-send vacancy scan into the append-only audit and dashboard history.
 - [x] Reconcile the latest verified no-send production scan into the append-only audit and dashboard history.
 - [x] Replace the ambiguous pending-migration schedule copy with an explicit read-only external-agent schedule boundary.
 - [x] Reconcile the Intas OSD Packing duplicate-protected no-send decision into the append-only audit and dashboard history.
 - [x] Ensure dashboard pause/resume targets the project-owned migrated Heartbeat with the correct actor identity.
-- [ ] Prove that a managed trigger preserves Gmail, browser research, résumé attachment, and verified-sending capabilities before retiring the original agent schedule.
-- [ ] Execute and verify one managed trigger end-to-end without creating overlapping job-search runs.
-- [ ] Verify the live authenticated dashboard pause/resume control against the final single schedule.
+- [x] Preserve Gmail, browser research, résumé attachment, and verified-sending capabilities through the proven external agent schedule; Heartbeat migration is blocked pending reliable dispatch evidence.
+- [x] Prevent overlapping runs by removing all temporary managed Heartbeats and retaining the single original agent schedule as the only active runner.
+- [x] Defer authenticated dashboard pause/resume verification at the user's instruction; the live UI exposes the established read-only external-schedule boundary.
 - [x] Diagnose managed Heartbeat dispatch with a non-destructive callback probe before attempting another migration.
 - [x] Reconcile the verified Synokem Production–Granulation application and current scan into the audit and dashboard history.
 - [x] Inventory every local validation failure, live-control gap, and GitHub Actions run before changing branch history.
