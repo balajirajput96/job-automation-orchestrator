@@ -34,8 +34,11 @@
 - [ ] Verify the live authenticated dashboard pause/resume control against the final single schedule.
 - [x] Diagnose managed Heartbeat dispatch with a non-destructive callback probe before attempting another migration.
 - [x] Reconcile the verified Synokem Production–Granulation application and current scan into the audit and dashboard history.
-- [ ] Inventory every local validation failure, live-control gap, and GitHub Actions run before changing branch history.
+- [x] Inventory every local validation failure, live-control gap, and GitHub Actions run before changing branch history.
 - [ ] Fix all code and configuration defects found in the inventory and verify each affected run locally.
-- [ ] Review, repair, and rerun all failing GitHub Actions checks for the repository.
+- [x] Review, repair, and rerun all failing GitHub Actions checks for the repository.
 - [ ] Rebase the clean verified branch only after local tests, type checks, and GitHub checks pass.
-- [ ] Export the current job-automation-orchestrator source to its dedicated private GitHub repository with a matching verification workflow.
+- [x] Export the current job-automation-orchestrator source to its dedicated private GitHub repository with a matching verification workflow.
+- [x] Complete all code-only local validation and GitHub CI repairs before the deferred authenticated dashboard check.
+- [ ] Resolve or document the persistent GitHub-managed Dependabot queue separately from the passing dashboard CI workflow.
+- [x] Remove or justify remaining source and template TODO placeholders discovered during the code inventory.
