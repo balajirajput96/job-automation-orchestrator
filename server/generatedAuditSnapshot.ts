@@ -2,6 +2,15 @@
 export const auditSource = "/home/ubuntu/job_search_findings.md";
 export const applicationRecords = [
   {
+    "messageId": "1a014ae63b304a4d",
+    "sentAt": 1787053320000,
+    "employer": "Covalent Laboratories",
+    "role": "Production – API Manufacturing",
+    "location": "Gundla Machnoor, Sangareddy, Telangana",
+    "recipient": "ta@covalentlab.com",
+    "historicalExclusion": false
+  },
+  {
     "messageId": "1a012f040cfc7eb8",
     "sentAt": 1787024100000,
     "employer": "Viyash Scientific Limited Unit-V",
@@ -390,6 +399,20 @@ export const applicationRecords = [
   }
 ] as const;
 export const runRecords = [
+  {
+    "id": "audit-run-13",
+    "label": "Verified Production and Biotechnology run — 18 August 2026 (17:12 IST)",
+    "date": "18 Aug 2026 (IST)",
+    "reviewed": 7,
+    "sent": 1,
+    "decision": "Covalent Laboratories Production was sent after two current public sources corroborated the company-domain contact and Gmail returned no duplicate. Alivus, Dr. Reddy’s, Hetero, Piramal, Apothecon and Viyash were safely skipped for specialised qualification/API mismatch, fresher-only criteria, seniority/formulation-development mismatch, incomplete contact attribution, or duplicate protection.",
+    "sources": [
+      "https://pharmajobalert.in/covalent-laboratories-walk-in-22nd-august-2026-freshers-experience/amp/",
+      "https://pharmawisdom.co.in/covalent-laboratories-walk-in-interviews-for-freshers-experienced-in-production-solvent-recovery-on-22nd-aug-2026/",
+      "https://pharmabharat.org/alivus-life-sciences-hiring-for-production/",
+      "https://pharmawisdom.co.in/hetero-walk-in-drive-on-22nd-aug-2026/"
+    ]
+  },
   {
     "id": "audit-run-12",
     "label": "Verified Production and Biotechnology run — 18 August 2026",

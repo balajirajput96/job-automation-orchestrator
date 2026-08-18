@@ -64,3 +64,7 @@
 - [x] Recheck the exact-state GitHub Actions queue and distinguish a hosted-runner delay from a code-controlled failure.
 - [x] Repair and validate any newly actionable project issue; otherwise preserve the verified clean branch.
 - [x] Capture final CI/rebase evidence or document the external queue boundary accurately.
+- [x] Verify the retained twice-daily workflow and research the current prioritized Production, Manufacturing, Biotechnology, and walk-in vacancy set.
+- [x] Apply only to independently verifiable, current, role-relevant published-email opportunities after duplicate and exclusion checks.
+- [x] Append all reviewed outcomes, regenerate the dashboard snapshot, and validate the updated data.
+- [x] Update audit snapshot regression expectations for the verified 44-application, 13-run dataset and rerun complete validation.
