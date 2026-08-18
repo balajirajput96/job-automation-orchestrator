@@ -71,3 +71,6 @@
 - [x] Audit all accessible GitHub workflow conclusions, current branch state, and relevant existing connector/schedule availability before any rebase.
 - [x] Repair any actual code-controlled failure and rerun locked local validation plus a fresh GitHub CI check.
 - [x] Capture clean rebase evidence only after fresh CI success; retain the existing job schedule and avoid duplicate or speculative Gemini Spark scheduling.
+- [x] Audit all accessible GitHub workflow runs and distinguish actionable project failures from historical superseded runs and platform-managed queues.
+- [ ] Repair any newly discovered code-controlled issue, rerun locked local validation and fresh GitHub CI, then rebase only after success.
+- [x] Verify relevant existing schedule and connector boundaries without enabling unconfigured Gemini/Spark services or creating duplicate schedules.
