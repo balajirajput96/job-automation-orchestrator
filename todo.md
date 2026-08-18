@@ -54,3 +54,7 @@
 - [x] Audit all accessible GitHub workflow runs and distinguish code-controlled failures from platform-managed queues before branch history changes.
 - [x] After the fresh successful CI run, capture a clean `github/main` rebase and synchronized branch-status evidence.
 - [x] Prepare a sanitized, reproducible report of project changes, safe terminal commands, and current connected-account status without exposing credentials.
+- [x] Re-audit all accessible GitHub Actions runs and distinguish source-controlled failures from GitHub runner or Dependabot queues.
+- [x] Repair any newly discovered code-controlled issue, rerun locked local validation, and verify a fresh GitHub CI result.
+- [x] Capture final clean rebase evidence only after the latest verification run is successful; document any external queue boundary separately.
+- [x] Inspect only the connectors relevant to the existing Gmail job workflow and GitHub CI audit without creating duplicate or speculative integrations.
