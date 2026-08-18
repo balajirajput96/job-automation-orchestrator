@@ -44,5 +44,5 @@
 - [x] Remove or justify remaining source and template TODO placeholders discovered during the code inventory.
 - [x] Re-audit every current GitHub run and distinguish code-controlled failures from platform-managed queues.
 - [x] Repair any newly found code-controlled failure, rerun local validation, and verify the latest GitHub CI run passes.
-- [ ] Commit the refreshed repair tracker, verify its GitHub CI run, then capture a clean post-pass rebase status.
+- [x] Commit the refreshed repair tracker, verify its GitHub CI run, then capture a clean post-pass rebase status.
 - [x] Resolve the local Corepack signature failure for the pnpm-pinned validation path and rerun the complete local suite.
