@@ -58,3 +58,6 @@
 - [x] Repair any newly discovered code-controlled issue, rerun locked local validation, and verify a fresh GitHub CI result.
 - [x] Capture final clean rebase evidence only after the latest verification run is successful; document any external queue boundary separately.
 - [x] Inspect only the connectors relevant to the existing Gmail job workflow and GitHub CI audit without creating duplicate or speculative integrations.
+- [x] Complete one final comprehensive GitHub run audit and identify only actionable code-controlled failures.
+- [x] Run locked local validation after any necessary repair and verify a new successful GitHub CI run.
+- [x] Capture final clean rebase evidence and document relevant connector boundaries without duplicate integration setup.
