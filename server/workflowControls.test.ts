@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { assertManualConfirmation, buildVerifiedRunRequest, RESUME_STORAGE_PATH, resolveHeartbeatActorSession, VERIFIED_WORKFLOW_CONNECTORS } from "./workflowControls";
+import { assertManualConfirmation, buildVerifiedRunRequest, RESUME_STORAGE_PATH, resolveHeartbeatActorSession, startVerifiedRun, VERIFIED_WORKFLOW_CONNECTORS } from "./workflowControls";
 import { permanentExclusion, scheduleBoundary } from "./workflowData";
 
 describe("verified job-search controls", () => {
@@ -22,6 +22,10 @@ describe("verified job-search controls", () => {
 
   it("uses the static project attachment path instead of embedding resume bytes in the task request", () => {
     expect(RESUME_STORAGE_PATH).toMatch(/^\/manus-storage\/Production_Officer_Resume_10_July_2026_/);
+  });
+
+  it("fails safely before remote task creation when the server API key is unavailable", async () => {
+    await expect(startVerifiedRun({ apiKey: undefined, confirmed: true, resumeUrl: "https://example.com/resume.pdf" })).rejects.toThrow(/MANUS_API_KEY must be configured/i);
   });
 
   it("declares the retained agent schedule as read-only to prevent a duplicate replacement", () => {

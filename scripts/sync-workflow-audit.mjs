@@ -2,9 +2,9 @@ import { readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const projectPath = process.cwd();
-const auditPath = "/home/ubuntu/job_search_findings.md";
+const auditPath = process.env.WORKFLOW_AUDIT_PATH ?? "/home/ubuntu/job_search_findings.md";
 const rowsPath = resolve(projectPath, "gmail_application_rows.tsv");
-const generatedPath = resolve(projectPath, "server/generatedAuditSnapshot.ts");
+const generatedPath = process.env.WORKFLOW_AUDIT_OUTPUT_PATH ?? resolve(projectPath, "server/generatedAuditSnapshot.ts");
 const reconciliationMarker = "<!-- dashboard-gmail-reconciliation-records:v1 -->";
 const runHistoryMarker = "<!-- dashboard-run-history-records:v1 -->";
 const auditOnly = process.argv.includes("--from-audit");
