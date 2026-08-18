@@ -61,3 +61,6 @@
 - [x] Complete one final comprehensive GitHub run audit and identify only actionable code-controlled failures.
 - [x] Run locked local validation after any necessary repair and verify a new successful GitHub CI run.
 - [x] Capture final clean rebase evidence and document relevant connector boundaries without duplicate integration setup.
+- [x] Recheck the exact-state GitHub Actions queue and distinguish a hosted-runner delay from a code-controlled failure.
+- [x] Repair and validate any newly actionable project issue; otherwise preserve the verified clean branch.
+- [x] Capture final CI/rebase evidence or document the external queue boundary accurately.
