@@ -69,5 +69,5 @@
 - [x] Append all reviewed outcomes, regenerate the dashboard snapshot, and validate the updated data.
 - [x] Update audit snapshot regression expectations for the verified 44-application, 13-run dataset and rerun complete validation.
 - [x] Audit all accessible GitHub workflow conclusions, current branch state, and relevant existing connector/schedule availability before any rebase.
-- [ ] Repair any actual code-controlled failure and rerun locked local validation plus a fresh GitHub CI check.
-- [ ] Capture clean rebase evidence only after fresh CI success; retain the existing job schedule and avoid duplicate or speculative Gemini Spark scheduling.
+- [x] Repair any actual code-controlled failure and rerun locked local validation plus a fresh GitHub CI check.
+- [x] Capture clean rebase evidence only after fresh CI success; retain the existing job schedule and avoid duplicate or speculative Gemini Spark scheduling.
