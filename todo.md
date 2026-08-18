@@ -51,3 +51,6 @@
 - [x] Apply only to new, current, independently verified, role-relevant postings after Gmail duplicate checks and permanent-exclusion screening.
 - [x] Append every reviewed outcome to the workflow audits and regenerate the dashboard snapshot for this run.
 - [x] Update audit snapshot regression expectations for the verified 43-application, 12-run dataset and rerun validation.
+- [x] Audit all accessible GitHub workflow runs and distinguish code-controlled failures from platform-managed queues before branch history changes.
+- [ ] Repair any current code-controlled workflow failures, verify local checks and GitHub CI, then perform a clean rebase.
+- [ ] Prepare a sanitized, reproducible report of project changes, safe terminal commands, and current connected-account status without exposing credentials.
