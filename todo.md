@@ -78,5 +78,5 @@
 - [x] Repair and validate any actionable code-controlled issue, then push or merge the verified result to GitHub main.
 - [x] Capture fresh successful CI and a clean rebase state while preserving the existing job schedule and avoiding unverified connector activation.
 - [x] Re-audit GitHub main, accessible workflow conclusions, remote merge candidates, and relevant automation boundaries.
-- [ ] Repair and validate any actual code-controlled issue, then push or merge the verified result to GitHub main.
-- [ ] Capture a fresh successful CI and clean rebase state without enabling unconfigured Gemini/Spark services or duplicating schedules.
+- [x] Repair and validate any actual code-controlled issue, then push or merge the verified result to GitHub main.
+- [x] Capture a fresh successful CI and clean rebase state without enabling unconfigured Gemini/Spark services or duplicating schedules.
