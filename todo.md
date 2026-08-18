@@ -74,3 +74,6 @@
 - [x] Audit all accessible GitHub workflow runs and distinguish actionable project failures from historical superseded runs and platform-managed queues.
 - [x] Repair any newly discovered code-controlled issue, rerun locked local validation and fresh GitHub CI, then rebase only after success.
 - [x] Verify relevant existing schedule and connector boundaries without enabling unconfigured Gemini/Spark services or creating duplicate schedules.
+- [x] Audit current GitHub main, accessible workflow runs, and remote-branch state before merging or rebasing.
+- [ ] Repair and validate any actionable code-controlled issue, then push or merge the verified result to GitHub main.
+- [ ] Capture fresh successful CI and a clean rebase state while preserving the existing job schedule and avoiding unverified connector activation.
