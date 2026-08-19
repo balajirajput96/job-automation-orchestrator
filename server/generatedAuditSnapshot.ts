@@ -2,6 +2,15 @@
 export const auditSource = "/home/ubuntu/job_search_findings.md";
 export const applicationRecords = [
   {
+    "messageId": "1a019d5cb982262e",
+    "sentAt": 1787139780000,
+    "employer": "Indoco Remedies",
+    "role": "Production Operator / Sr. Supervisor – OSD Tablet Packing",
+    "location": "Baddi, Himachal Pradesh",
+    "recipient": "avinash.kumar@indoco.com",
+    "historicalExclusion": false
+  },
+  {
     "messageId": "1a014ae63b304a4d",
     "sentAt": 1787053320000,
     "employer": "Covalent Laboratories",
@@ -399,6 +408,21 @@ export const applicationRecords = [
   }
 ] as const;
 export const runRecords = [
+  {
+    "id": "audit-run-15",
+    "label": "Verified Production and Biotechnology follow-up run — 19 August 2026 (17:13 IST)",
+    "date": "19 Aug 2026 (IST)",
+    "reviewed": 20,
+    "sent": 1,
+    "decision": "Indoco Remedies Baddi OSD Tablet Packing was sent after a current published recruitment email, a recipient-specific empty Gmail search, and separate-role/company-history review. Nineteen other leads were safely skipped for stated qualification, functional experience, minimum-experience, past-date, insufficient-evidence, no-email-route, or duplicate-protection safeguards. The permanent exclusion remained untouched.",
+    "sources": [
+      "https://pharmabharat.org/indoco-remedies-hiring-for-production/",
+      "https://www.facebook.com/LincolnPharmaceuticalsLimited/posts/-hiring-alert-mega-walk-in-drive-are-you-looking-for-exciting-career-opportuniti/1374500591464230/",
+      "https://pharmabharat.com/aurobindo-pharma-is-hiring-for-production-packing-qc-qa/",
+      "https://pharmabharat.com/usv-private-limited-is-hiring-freshers-experienced-for-engineering-production-packing-qc/",
+      "https://pharmajobalert.in/jubilant-generics-ltd-walk-in-on-22nd-23rd-aug-2026-iti-diploma-102-m-sc-b-sc-b-pharm-m-pharm-for-multiple-positions/amp/"
+    ]
+  },
   {
     "id": "audit-run-14",
     "label": "Verified Production and Biotechnology run — 19 August 2026 (09:11 IST)",

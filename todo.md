@@ -84,3 +84,6 @@
 - [x] Apply only to current, independently verified published-email opportunities after eligibility, permanent-exclusion, and Gmail duplicate checks.
 - [x] Append every reviewed outcome, regenerate the dashboard snapshot, and validate the updated records.
 - [x] Update audit snapshot regression expectations for the verified 44-application, 14-run dataset and rerun complete validation.
+- [x] Verify the retained twice-daily workflow and research the current prioritized Production, Manufacturing, Biotechnology, and walk-in vacancy set.
+- [x] Apply only to current, independently verified published-email opportunities after eligibility, permanent-exclusion, and Gmail duplicate checks.
+- [x] Append every reviewed outcome, regenerate the dashboard snapshot, and validate the updated records.

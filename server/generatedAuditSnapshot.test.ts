@@ -4,20 +4,20 @@ import { applicationRecords, auditSource, runRecords } from "./generatedAuditSna
 describe("generated audit snapshot", () => {
   it("preserves the append-only job-search audit as its declared source", () => {
     expect(auditSource).toBe("/home/ubuntu/job_search_findings.md");
-    expect(applicationRecords).toHaveLength(44);
+    expect(applicationRecords).toHaveLength(45);
     expect(applicationRecords[0]).toMatchObject({
-      employer: "Covalent Laboratories",
-      recipient: "ta@covalentlab.com",
+      employer: "Indoco Remedies",
+      recipient: "avinash.kumar@indoco.com",
       historicalExclusion: false,
     });
     expect(applicationRecords.some(record => record.recipient.includes("aman.kumar@elysiumpharma.com"))).toBe(true);
   });
 
   it("includes audited scheduled-run history with real source URLs", () => {
-    expect(runRecords).toHaveLength(14);
-    expect(runRecords[0]).toMatchObject({ id: "audit-run-14", reviewed: 8, sent: 0 });
+    expect(runRecords).toHaveLength(15);
+    expect(runRecords[0]).toMatchObject({ id: "audit-run-15", reviewed: 20, sent: 1 });
     expect(runRecords.every(run => run.sources.length > 0)).toBe(true);
-    expect(runRecords.map(run => run.reviewed)).toEqual([8, 7, 9, 2, 1, 7, 10, 4, 4, 4, 4, 5, 4, 7]);
-    expect(runRecords.map(run => run.sent)).toEqual([0, 1, 2, 1, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1]);
+    expect(runRecords.map(run => run.reviewed)).toEqual([20, 8, 7, 9, 2, 1, 7, 10, 4, 4, 4, 4, 5, 4, 7]);
+    expect(runRecords.map(run => run.sent)).toEqual([1, 0, 1, 2, 1, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1]);
   });
 });
