@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { assertManualConfirmation, buildVerifiedRunRequest, RESUME_STORAGE_PATH, resolveHeartbeatActorSession, startVerifiedRun, VERIFIED_WORKFLOW_CONNECTORS } from "./workflowControls";
-import { permanentExclusion, scheduleBoundary } from "./workflowData";
+import { integrations, latestRun, permanentExclusion, scheduleBoundary } from "./workflowData";
 
 describe("verified job-search controls", () => {
   it("requires an explicit confirmation before a manual run can be created", () => {
@@ -32,6 +32,18 @@ describe("verified job-search controls", () => {
     expect(scheduleBoundary.controlMode).toBe("external-agent-read-only");
     expect(scheduleBoundary.description).toMatch(/Gmail, web-research and résumé-attachment capabilities/i);
     expect(scheduleBoundary.description).toMatch(/no duplicate/i);
+  });
+
+  it("derives the dashboard's last-run metadata from the newest audited run", () => {
+    expect(latestRun).toEqual({ date: "19 Aug 2026 (IST)", time: "17:13 IST" });
+  });
+
+  it("does not claim an unavailable Julius connector is authenticated", () => {
+    expect(integrations.find(integration => integration.name === "Julius AI")).toEqual({
+      name: "Julius AI",
+      detail: "Not configured in this task",
+      status: "Action required",
+    });
   });
 
   it("uses the project-owner actor for dashboard control of a project-owned Heartbeat", () => {

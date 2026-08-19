@@ -87,3 +87,9 @@
 - [x] Verify the retained twice-daily workflow and research the current prioritized Production, Manufacturing, Biotechnology, and walk-in vacancy set.
 - [x] Apply only to current, independently verified published-email opportunities after eligibility, permanent-exclusion, and Gmail duplicate checks.
 - [x] Append every reviewed outcome, regenerate the dashboard snapshot, and validate the updated records.
+- [x] Audit the current repository, package scripts, tracked integrations, remote state, and accessible GitHub Actions for actionable defects.
+- [x] Repair only evidence-backed project defects and add or update regression coverage where needed.
+- [ ] Complete practical local, runtime, connector-boundary, and GitHub CI validation, then capture clean rebase evidence.
+- [x] Replace stale hard-coded dashboard run timing with data derived from the newest audited run record.
+- [x] Correct the Julius AI dashboard status so it does not claim an unavailable connector is authenticated.
+- [x] Avoid protected dashboard queries before authentication resolves so signed-out visitors receive the sign-in state without retry delay.

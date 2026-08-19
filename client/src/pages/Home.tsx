@@ -21,8 +21,8 @@ function formatTime(timestamp: number) {
 
 export default function Home() {
   const auth = useAuth();
-  const dashboard = trpc.workflow.dashboard.useQuery();
-  const settings = trpc.workflow.settings.useQuery(undefined, { retry: false });
+  const dashboard = trpc.workflow.dashboard.useQuery(undefined, { enabled: auth.isAuthenticated, retry: false });
+  const settings = trpc.workflow.settings.useQuery(undefined, { enabled: auth.isAuthenticated, retry: false });
   const utils = trpc.useUtils();
   const [dialogOpen, setDialogOpen] = useState(false);
   const [filter, setFilter] = useState("");
@@ -72,7 +72,7 @@ export default function Home() {
 
         <section className="cards" aria-label="Workflow summary">
           <article className="metric"><div className="metric-label"><BriefcaseBusiness size={14} /> Total applications sent</div><div className="metric-value">{data.applications.length}</div><div className="metric-note">Audited Gmail message records</div></article>
-          <article className="metric"><div className="metric-label"><CalendarClock size={14} /> Last run time</div><div className="metric-value" style={{ fontSize: 18 }}>17 Aug 2026</div><div className="metric-note">17:06 IST · latest recorded run</div></article>
+          <article className="metric"><div className="metric-label"><CalendarClock size={14} /> Last run time</div><div className="metric-value" style={{ fontSize: 18 }}>{data.schedule.lastRun.date}</div><div className="metric-note">{data.schedule.lastRun.time} · latest audited run</div></article>
           <article className="metric"><div className="metric-label"><CircleDashed size={14} /> Next scheduled run</div><div className="metric-value" style={{ fontSize: 18 }}>09:00 IST</div><div className="metric-note">Then 17:00 IST · daily</div></article>
           <article className="metric"><div className="metric-label"><CheckCircle2 size={14} /> Current active workflow status</div><div className="metric-value" style={{ fontSize: 18, color: "#c9ee99" }}>Active</div><div className="metric-note">Verified-only application mode</div></article>
         </section>

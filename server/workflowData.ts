@@ -7,12 +7,20 @@ export const applicationRecords = auditApplications;
 export const runRecords = auditRuns;
 export { auditSource };
 
+const latestAuditedRun = runRecords[0];
+const auditedRunTime = latestAuditedRun?.label.match(/\((\d{2}:\d{2} IST)\)$/)?.[1];
+
+export const latestRun = {
+  date: latestAuditedRun?.date ?? "No audited run",
+  time: auditedRunTime ?? "Recorded time unavailable",
+} as const;
+
 export const permanentExclusion = "aman.kumar@elysiumpharma.com";
 
 export const integrations = [
   { name: "Gmail", detail: "balajirajput968@gmail.com", status: "Connected" },
   { name: "GitHub", detail: "balajirajput96", status: "Connected" },
-  { name: "Julius AI", detail: "authenticated", status: "Connected" },
+  { name: "Julius AI", detail: "Not configured in this task", status: "Action required" },
   { name: "Google Workspace", detail: "Connected", status: "Connected" },
   { name: "Antigravity CLI", detail: "Not installed", status: "Action required" },
 ] as const;
