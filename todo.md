@@ -93,3 +93,4 @@
 - [x] Replace stale hard-coded dashboard run timing with data derived from the newest audited run record.
 - [x] Correct the Julius AI dashboard status so it does not claim an unavailable connector is authenticated.
 - [x] Avoid protected dashboard queries before authentication resolves so signed-out visitors receive the sign-in state without retry delay.
+- [x] Update safe direct dependencies that remediate transitive production audit findings, then rerun security and application validation.
