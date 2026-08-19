@@ -14,10 +14,10 @@ describe("generated audit snapshot", () => {
   });
 
   it("includes audited scheduled-run history with real source URLs", () => {
-    expect(runRecords).toHaveLength(13);
-    expect(runRecords[0]).toMatchObject({ id: "audit-run-13", reviewed: 7, sent: 1 });
+    expect(runRecords).toHaveLength(14);
+    expect(runRecords[0]).toMatchObject({ id: "audit-run-14", reviewed: 8, sent: 0 });
     expect(runRecords.every(run => run.sources.length > 0)).toBe(true);
-    expect(runRecords.map(run => run.reviewed)).toEqual([7, 9, 2, 1, 7, 10, 4, 4, 4, 4, 5, 4, 7]);
-    expect(runRecords.map(run => run.sent)).toEqual([1, 2, 1, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1]);
+    expect(runRecords.map(run => run.reviewed)).toEqual([8, 7, 9, 2, 1, 7, 10, 4, 4, 4, 4, 5, 4, 7]);
+    expect(runRecords.map(run => run.sent)).toEqual([0, 1, 2, 1, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1]);
   });
 });

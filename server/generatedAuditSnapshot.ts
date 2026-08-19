@@ -400,6 +400,20 @@ export const applicationRecords = [
 ] as const;
 export const runRecords = [
   {
+    "id": "audit-run-14",
+    "label": "Verified Production and Biotechnology run — 19 August 2026 (09:11 IST)",
+    "date": "19 Aug 2026 (IST)",
+    "reviewed": 8,
+    "sent": 0,
+    "decision": "No application was sent. SRF, Hetero, Ajanta, Arovea, Sun Pharma, Bharat Biotech, Granules and Concord were safely skipped for stated qualification or functional mismatch, a missing email route, past-date status, or duplicate-company/role protection. The permanent exclusion remained untouched.",
+    "sources": [
+      "https://pharmabharat.org/hetero-hiring-for-production-quality-assurance-quality-control/",
+      "https://pharmabharat.org/ajanta-pharma-hiring-for-manufacturing-qa-qc-maintenance-stores-it/",
+      "https://pharmajobalert.in/arovea-formulations-pvt-ltd-we-are-hiring-freshers-experience-for-qaqcaccountsdispensingproductionitistore/amp/",
+      "https://pharmacareer.in/sun-pharmaceuticals-walk-in-on-20th-august-2026-freshers-experience/"
+    ]
+  },
+  {
     "id": "audit-run-13",
     "label": "Verified Production and Biotechnology run — 18 August 2026 (17:12 IST)",
     "date": "18 Aug 2026 (IST)",
