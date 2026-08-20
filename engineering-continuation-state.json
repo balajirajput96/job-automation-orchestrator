@@ -5,8 +5,20 @@
   "latestExecution": {
     "number": 2,
     "timestamp": "2026-08-20T21:24:33Z",
+    "repository": "balajirajput96/job-automation-orchestrator",
     "task": "Manual validation of the hourly GitHub maintenance workflow",
+    "workflow": "Hourly deterministic maintenance",
+    "usedCapabilities": [
+      "Git",
+      "GitHub CLI",
+      "GitHub Actions",
+      "pnpm",
+      "Node.js"
+    ],
+    "action": "hourly-deterministic-maintenance",
     "result": "completed",
+    "failureCategory": null,
+    "recoveryAttempt": 1,
     "validationStatus": "verified",
     "remainingBlocker": null,
     "nextRecommendedAction": "Allow the hourly GitHub maintenance workflow to continue; preserve the separate twice-daily job-search schedule."
@@ -24,7 +36,7 @@
       "tags": 0,
       "stashes": 0,
       "recentReflogVerified": true,
-      "latestCheckpoint": "manus-webdev://0d15f137"
+      "latestCheckpoint": "manus-webdev://e357ae05"
     }
   },
   "validatedCapabilities": [
@@ -46,7 +58,7 @@
     {
       "component": "Current dashboard validation",
       "status": "passed",
-      "evidence": "TypeScript, 13 Vitest tests, production build, and GitHub Actions run 32365539445"
+      "evidence": "TypeScript, 15 Vitest tests, production build, and GitHub Actions run 32419716887"
     }
   ],
   "existingAutomation": [
@@ -59,6 +71,46 @@
       "changePolicy": "Preserve; do not duplicate or weaken with a replacement schedule."
     }
   ],
+  "historicalInventory": {
+    "verifiedSources": [
+      "Git working tree, remotes, branches, commit history, reflog, tags and stashes",
+      "Project source, schema migrations, tests, scheduler callbacks and workflow configuration",
+      "Existing twice-daily job-search schedule and enabled connector inventory",
+      "GitHub Actions history and manually dispatched hourly maintenance run"
+    ],
+    "preservationPolicy": "Preserve verified history, avoid resets, and change only evidence-backed components with tests and CI."
+  },
+  "maintenanceExecutionContract": {
+    "provider": "GitHub Actions",
+    "cron": "0 * * * *",
+    "maximumExecutionCycles": 2400,
+    "recordLocation": "GitHub Actions artifact engineering-maintenance-execution-<run-id>",
+    "requiredFields": [
+      "executionNumber",
+      "timestamp",
+      "repository",
+      "workflow",
+      "usedCapabilities",
+      "action",
+      "result",
+      "failureCategory",
+      "recoveryAttempt",
+      "validationStatus",
+      "productionDependencyAudit",
+      "remainingBlocker",
+      "nextRecommendedAction"
+    ]
+  },
+  "maintenanceValidationPolicy": {
+    "checks": [
+      "git-diff-check",
+      "typecheck",
+      "tests",
+      "production-build",
+      "production-dependency-audit"
+    ],
+    "dependencyAdvisoryPolicy": "Capture production dependency advisories for review; do not automatically update packages in a scheduled workflow."
+  },
   "identifiedGaps": [
     {
       "category": "continuationScheduling",

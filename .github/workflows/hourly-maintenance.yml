@@ -40,6 +40,21 @@ jobs:
           pnpm check
           pnpm test --run
           pnpm build
+      - name: Record production dependency advisories
+        id: production_audit
+        if: always()
+        shell: bash
+        run: |
+          set +e
+          pnpm audit --prod --json > production-dependency-audit.json
+          audit_exit=$?
+          set -e
+          if [ "$audit_exit" -eq 0 ]; then
+            echo "status=clean" >> "$GITHUB_OUTPUT"
+          else
+            echo "status=advisories-detected" >> "$GITHUB_OUTPUT"
+          fi
+          exit 0
       - name: Write secret-free execution record
         if: always()
         shell: bash
@@ -54,9 +69,15 @@ jobs:
             "runId": "${{ github.run_id }}",
             "trigger": "${{ github.event_name }}",
             "commit": "${{ github.sha }}",
+            "usedCapabilities": ["Git", "GitHub Actions", "pnpm", "Node.js"],
             "action": "hourly-deterministic-maintenance",
             "result": "${{ job.status }}",
-            "validation": ["git-diff-check", "typecheck", "tests", "production-build"],
+            "failureCategory": null,
+            "recoveryAttempt": "${{ github.run_attempt }}",
+            "validationStatus": "${{ job.status }}",
+            "validation": ["git-diff-check", "typecheck", "tests", "production-build", "production-dependency-audit"],
+            "productionDependencyAudit": "${{ steps.production_audit.outputs.status }}",
+            "remainingBlocker": null,
             "nextRecommendedAction": "Continue the next scheduled maintenance cycle unless a validation job reports failure.",
             "secretsRecorded": false
           }
@@ -66,5 +87,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: engineering-maintenance-execution-${{ github.run_id }}
-          path: engineering-maintenance-execution.json
+          path: |
+            engineering-maintenance-execution.json
+            production-dependency-audit.json
           retention-days: 100

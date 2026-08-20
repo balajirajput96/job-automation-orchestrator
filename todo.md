@@ -107,3 +107,5 @@
 - [x] Keep the deployed cron-only callback available for future platform recovery, but do not claim a real callback execution while the Heartbeat dispatch path remains unverified.
 - [x] Remove the non-dispatching project-owned Heartbeat maintenance schedules after preserving the diagnostic result in the continuation state.
 - [x] Trigger and verify the GitHub hourly maintenance workflow as the reliable deterministic continuation mechanism.
+- [x] Reconcile the attached persistent-engineering mission with the current verified workflow and document only evidence-backed capability boundaries.
+- [x] Add a read-only production dependency-audit artifact to the hourly maintenance workflow without treating existing advisory findings as automatic code changes.
