@@ -1,0 +1,38 @@
+name: Hourly deterministic maintenance
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Respect the 2,400-cycle maintenance window
+        shell: bash
+        run: |
+          if [ "$(date -u +%s)" -gt "$(date -u -d '2026-11-28T12:00:00Z' +%s)" ]; then
+            echo "The bounded maintenance window has ended; skipping validation."
+            exit 0
+          fi
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.15.1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Install locked dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Validate source integrity
+        run: git diff --check
+      - name: Run deterministic maintenance checks
+        run: |
+          pnpm check
+          pnpm test --run
+          pnpm build

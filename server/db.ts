@@ -1,6 +1,6 @@
-import { desc, eq } from "drizzle-orm";
+import { count, desc, eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, workflowControlEvents, workflowSettings } from "../drizzle/schema";
+import { engineeringMaintenanceRuns, InsertUser, users, workflowControlEvents, workflowSettings } from "../drizzle/schema";
 import { ENV } from "./_core/env";
 
 let database: ReturnType<typeof drizzle> | null = null;
@@ -55,4 +55,44 @@ export async function listWorkflowControlEvents(ownerOpenId: string) {
   const db = await getDb();
   if (!db) return [];
   return db.select().from(workflowControlEvents).where(eq(workflowControlEvents.ownerOpenId, ownerOpenId)).orderBy(desc(workflowControlEvents.createdAt)).limit(8);
+}
+
+export async function countEngineeringMaintenanceRuns(heartbeatTaskUid: string) {
+  const db = await getDb();
+  if (!db) throw new Error("Engineering maintenance database is unavailable.");
+  const result = await db.select({ value: count() }).from(engineeringMaintenanceRuns).where(eq(engineeringMaintenanceRuns.heartbeatTaskUid, heartbeatTaskUid));
+  return result[0]?.value ?? 0;
+}
+
+export async function recordEngineeringMaintenanceRun(input: {
+  heartbeatTaskUid: string;
+  scheduledHour: string;
+  executionNumber: number;
+  action: string;
+  result: string;
+  validationStatus: string;
+  failureCategory?: string | null;
+  recoveryAttempt?: number;
+  detail: string;
+  remainingBlocker?: string | null;
+  nextRecommendedAction: string;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Engineering maintenance database is unavailable.");
+  await db.insert(engineeringMaintenanceRuns).values({
+    ...input,
+    failureCategory: input.failureCategory ?? null,
+    recoveryAttempt: input.recoveryAttempt ?? 0,
+    remainingBlocker: input.remainingBlocker ?? null,
+  }).onDuplicateKeyUpdate({
+    set: {
+      result: input.result,
+      validationStatus: input.validationStatus,
+      failureCategory: input.failureCategory ?? null,
+      recoveryAttempt: input.recoveryAttempt ?? 0,
+      detail: input.detail,
+      remainingBlocker: input.remainingBlocker ?? null,
+      nextRecommendedAction: input.nextRecommendedAction,
+    },
+  });
 }

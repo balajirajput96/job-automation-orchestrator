@@ -98,3 +98,9 @@
 - [x] Align the dynamic last-run regression assertion with the newest audited run record.
 - [x] Record the 20 August 17:13 IST verified Production/Manufacturing run, synchronize dashboard data, and validate the no-send outcome.
 - [x] Align the dynamic last-run regression assertion with the 20 August 17:13 IST audit record.
+- [x] Inventory the active repository, relevant recoverable history, existing automation, schedules, and authorized integration boundaries.
+- [x] Create a secret-free machine-readable engineering continuation record from verified inventory findings.
+- [x] Design and confirm a durable continuation schedule that preserves the active twice-daily job-search run and avoids unsupported hourly agent polling.
+- [x] Implement an idempotent hourly engineering-maintenance callback with bounded validation and secret-free execution-state updates.
+- [ ] Create a project-owned hourly maintenance schedule without modifying the existing twice-daily job-search schedule.
+- [ ] Validate one real hourly-maintenance callback, audit its execution state, and preserve the verified implementation in GitHub.

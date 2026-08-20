@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "mission": "Preserve and incrementally maintain the verified job-automation engineering environment without disrupting the active job-search workflow.",
+  "maximumExecutionCycles": 2400,
+  "latestExecution": {
+    "number": 1,
+    "timestamp": "2026-08-20T11:48:14Z",
+    "task": "Initial recoverable environment inventory",
+    "result": "completed",
+    "validationStatus": "verified",
+    "remainingBlocker": "A durable continuation schedule has not been selected. The active twice-daily agent schedule remains reserved for verified job-search work.",
+    "nextRecommendedAction": "Choose an hourly deterministic maintenance route or retain the existing twice-daily AI-assisted job-search schedule without adding hourly agent polling."
+  },
+  "repository": {
+    "name": "balajirajput96/job-automation-orchestrator",
+    "path": "/home/ubuntu/job-automation-orchestrator",
+    "branch": "main",
+    "head": "0d15f137dd838d2a591af44abeec807f380e935d",
+    "remotes": [
+      "origin",
+      "github"
+    ],
+    "recovery": {
+      "tags": 0,
+      "stashes": 0,
+      "recentReflogVerified": true,
+      "latestCheckpoint": "manus-webdev://0d15f137"
+    }
+  },
+  "validatedCapabilities": [
+    {
+      "component": "GitHub CLI",
+      "status": "authenticated",
+      "safeHealthCheck": "gh auth status"
+    },
+    {
+      "component": "Google Workspace",
+      "status": "authenticated",
+      "safeHealthCheck": "Drive metadata read"
+    },
+    {
+      "component": "Gmail",
+      "status": "connected",
+      "scope": "Verified role-specific job applications only"
+    },
+    {
+      "component": "Current dashboard validation",
+      "status": "passed",
+      "evidence": "TypeScript, 13 Vitest tests, production build, and GitHub Actions run 32365539445"
+    }
+  ],
+  "existingAutomation": [
+    {
+      "name": "Production Officer job applications",
+      "status": "active",
+      "frequency": "09:00 and 17:00 Asia/Kolkata",
+      "expiresAt": "2026-10-13T18:29:59Z",
+      "purpose": "Verified job discovery, recipient-level duplicate protection, Gmail applications, and audit synchronization",
+      "changePolicy": "Preserve; do not duplicate or weaken with a replacement schedule."
+    }
+  ],
+  "identifiedGaps": [
+    {
+      "category": "continuationScheduling",
+      "status": "decisionRequired",
+      "detail": "Hourly agent-session polling is not an appropriate continuation mechanism. A deterministic scheduled maintenance workflow requires an implementation route decision before creation."
+    },
+    {
+      "category": "availableCliCoverage",
+      "status": "bounded",
+      "detail": "Git, GitHub CLI and Google Workspace CLI are available and verified. Gemini, Antigravity, Jules and Datadog CLIs are not installed, so no unsupported integration is claimed."
+    }
+  ],
+  "secretsRecorded": false
+}
