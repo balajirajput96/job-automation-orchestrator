@@ -8,6 +8,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: hourly-engineering-maintenance
+  cancel-in-progress: false
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -36,3 +40,31 @@ jobs:
           pnpm check
           pnpm test --run
           pnpm build
+      - name: Write secret-free execution record
+        if: always()
+        shell: bash
+        run: |
+          cat > engineering-maintenance-execution.json <<EOF
+          {
+            "schemaVersion": 1,
+            "executionNumber": "${{ github.run_number }}",
+            "timestamp": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "repository": "${{ github.repository }}",
+            "workflow": "${{ github.workflow }}",
+            "runId": "${{ github.run_id }}",
+            "trigger": "${{ github.event_name }}",
+            "commit": "${{ github.sha }}",
+            "action": "hourly-deterministic-maintenance",
+            "result": "${{ job.status }}",
+            "validation": ["git-diff-check", "typecheck", "tests", "production-build"],
+            "nextRecommendedAction": "Continue the next scheduled maintenance cycle unless a validation job reports failure.",
+            "secretsRecorded": false
+          }
+          EOF
+      - name: Preserve execution record
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: engineering-maintenance-execution-${{ github.run_id }}
+          path: engineering-maintenance-execution.json
+          retention-days: 100

@@ -14,7 +14,7 @@ const state = JSON.parse(
 describe("engineering continuation state", () => {
   it("records a bounded, recoverable and secret-free initial execution", () => {
     expect(state.maximumExecutionCycles).toBe(2400);
-    expect(state.latestExecution).toMatchObject({ number: 1, validationStatus: "verified" });
+    expect(state.latestExecution).toMatchObject({ number: 2, validationStatus: "verified" });
     expect(state.existingAutomation).toContainEqual(
       expect.objectContaining({
         name: "Production Officer job applications",

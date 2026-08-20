@@ -102,5 +102,8 @@
 - [x] Create a secret-free machine-readable engineering continuation record from verified inventory findings.
 - [x] Design and confirm a durable continuation schedule that preserves the active twice-daily job-search run and avoids unsupported hourly agent polling.
 - [x] Implement an idempotent hourly engineering-maintenance callback with bounded validation and secret-free execution-state updates.
-- [ ] Create a project-owned hourly maintenance schedule without modifying the existing twice-daily job-search schedule.
-- [ ] Validate one real hourly-maintenance callback, audit its execution state, and preserve the verified implementation in GitHub.
+- [x] Create and manually verify the GitHub-scheduled hourly maintenance workflow without modifying the existing twice-daily job-search schedule.
+- [ ] Record each GitHub maintenance execution as a durable secret-free workflow artifact and preserve the Heartbeat non-dispatch diagnostic in repository state.
+- [ ] Keep the deployed cron-only callback available for future platform recovery, but do not claim a real callback execution while the Heartbeat dispatch path remains unverified.
+- [x] Remove the non-dispatching project-owned Heartbeat maintenance schedules after preserving the diagnostic result in the continuation state.
+- [x] Trigger and verify the GitHub hourly maintenance workflow as the reliable deterministic continuation mechanism.
