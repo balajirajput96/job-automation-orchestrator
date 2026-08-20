@@ -409,6 +409,20 @@ export const applicationRecords = [
 ] as const;
 export const runRecords = [
   {
+    "id": "audit-run-16",
+    "label": "Verified Production and Manufacturing run — 20 August 2026 (09:13 IST)",
+    "date": "20 Aug 2026 (IST)",
+    "reviewed": 10,
+    "sent": 0,
+    "decision": "No application was sent. Ciron Drugs Boisar Packing/Manufacturing was the only reasonably eligible new published-email route; recipient and company Gmail searches were clean, but the résumé-backed request remained unconfirmed in the Gmail delivery safeguard and was stopped after a follow-up recipient search remained empty. Stallion, IPCA, Medley, Felix, Haleos, FDC, Saga, Naprod and Aarti were safely skipped for duplicate protection, functional or qualification mismatch, missing role-level evidence, or missing email route. The permanent exclusion remained untouched.",
+    "sources": [
+      "https://pharmastuff.org/job/ciron-drugs-walk-in-interview-qc-qa-production",
+      "https://pharmastuff.org/job/medley-pharmaceuticals-production-qc-recruitment",
+      "https://pharmajobalert.in/saga-lifesciences-walk-in-on-21st-and-22nd-august-for-qaqcaqarapurchaseibdpahrproductionpackingengineering/amp/",
+      "https://pharmajobalert.in/aarti-pharmalabs-ltd-walk-in-on-23rd-august-2026-sunday-for-multiple-positions/amp/"
+    ]
+  },
+  {
     "id": "audit-run-15",
     "label": "Verified Production and Biotechnology follow-up run — 19 August 2026 (17:13 IST)",
     "date": "19 Aug 2026 (IST)",

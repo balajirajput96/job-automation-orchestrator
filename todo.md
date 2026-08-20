@@ -94,3 +94,5 @@
 - [x] Correct the Julius AI dashboard status so it does not claim an unavailable connector is authenticated.
 - [x] Avoid protected dashboard queries before authentication resolves so signed-out visitors receive the sign-in state without retry delay.
 - [x] Update safe direct dependencies that remediate transitive production audit findings, then rerun security and application validation.
+- [x] Record the 20 August verified Production/Manufacturing run, synchronize dashboard data, and validate the updated no-send outcome.
+- [x] Align the dynamic last-run regression assertion with the newest audited run record.
