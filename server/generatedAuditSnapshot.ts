@@ -409,6 +409,20 @@ export const applicationRecords = [
 ] as const;
 export const runRecords = [
   {
+    "id": "audit-run-17",
+    "label": "Verified Production and Manufacturing follow-up run — 20 August 2026 (17:13 IST)",
+    "date": "20 Aug 2026 (IST)",
+    "reviewed": 14,
+    "sent": 0,
+    "decision": "No application was sent. Pinnacle Life Science Baddi Compression/Granulation was the only new role with reasonable OSD functional fit and a current public company email; duplicate checks were empty, but the personalized résumé-backed delivery request remained unconfirmed and was stopped after re-check. Lupin, Zydus, Metrochem, MSN, Neuland, Aspiro, BioMatrix, Terratech, Troikaa, Haleos, OneSource and Synokem were safely excluded for stated qualification/experience or functional mismatch, stale/closed status, incomplete role evidence, no email route, role scope mismatch, or duplicate protection. The permanent exclusion remained untouched.",
+    "sources": [
+      "https://pharmajobalert.in/pinnacle-life-science-pvt-ltd-walk-in-on-23rd-august-sunday-for-qaqcitehsproduction/amp/",
+      "https://pharmarising.in/zydus-lifesciences-walk-in-interview-august-2026/",
+      "https://pharmabharat.com/aspiro-pharma-limited-is-hiring-for-production-engineering-job/",
+      "https://pharmabharat.org/neuland-laboratories-hiring-for-production-quality-control-quality-assurance-2/"
+    ]
+  },
+  {
     "id": "audit-run-16",
     "label": "Verified Production and Manufacturing run — 20 August 2026 (09:13 IST)",
     "date": "20 Aug 2026 (IST)",
