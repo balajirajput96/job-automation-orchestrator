@@ -418,6 +418,21 @@ export const applicationRecords = [
 ] as const;
 export const runRecords = [
   {
+    "id": "audit-run-19",
+    "label": "Verified Production, Manufacturing and Biotechnology follow-up — 21 August 2026 (17:08 IST)",
+    "date": "21 Aug 2026 (IST)",
+    "reviewed": 10,
+    "sent": 0,
+    "decision": "No application was sent. Global Calcium, Verdant, Felix, Sunrise, Yeluri, Metrochem, Lupin, Micro Labs, Aurobindo and Bharat Parenterals/local social-source leads were safely excluded for stated qualification or experience mismatch, sterile/API functional mismatch, missing explicit email or role-level evidence, incomplete/stale source evidence, or prior substantially similar company outreach. The permanent exclusion remained untouched.",
+    "sources": [
+      "https://pharmabharat.com/global-calcium-is-hiring-freshers-for-apprentice-production/",
+      "https://pharmawisdom.co.in/felix-generics-walk-in-on-21st-aug-2026/",
+      "https://pharmabharat.com/lupin-manufacturing-solutions-is-hiring-for-production-and-quality-control/",
+      "https://pharmastuff.org/job/micro-labs-production-packing-engineering-jobs",
+      "https://pharmastuff.org/job/aurobindo-pharma-walk-in-interview-production-qc-qa"
+    ]
+  },
+  {
     "id": "audit-run-18",
     "label": "Verified Production, Manufacturing and Biotechnology run — 21 August 2026 (09:06 IST)",
     "date": "21 Aug 2026 (IST)",

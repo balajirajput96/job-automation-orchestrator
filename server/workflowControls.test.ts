@@ -35,7 +35,7 @@ describe("verified job-search controls", () => {
   });
 
   it("derives the dashboard's last-run metadata from the newest audited run", () => {
-    expect(latestRun).toEqual({ date: "21 Aug 2026 (IST)", time: "09:06 IST" });
+    expect(latestRun).toEqual({ date: "21 Aug 2026 (IST)", time: "17:08 IST" });
   });
 
   it("does not claim an unavailable Julius connector is authenticated", () => {
