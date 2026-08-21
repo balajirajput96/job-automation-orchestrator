@@ -109,3 +109,4 @@
 - [x] Trigger and verify the GitHub hourly maintenance workflow as the reliable deterministic continuation mechanism.
 - [x] Reconcile the attached persistent-engineering mission with the current verified workflow and document only evidence-backed capability boundaries.
 - [x] Add a read-only production dependency-audit artifact to the hourly maintenance workflow without treating existing advisory findings as automatic code changes.
+- [x] Synchronize verified audit-run-18 with the dashboard snapshot and update regression coverage for the 46-application, 18-run dataset.

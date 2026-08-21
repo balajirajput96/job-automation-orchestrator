@@ -2,6 +2,15 @@
 export const auditSource = "/home/ubuntu/job_search_findings.md";
 export const applicationRecords = [
   {
+    "messageId": "1a02263f0ae78ed7",
+    "sentAt": 1787283370000,
+    "employer": "Aspiro Pharma Ltd.",
+    "role": "Production Operator / Officer – Sterile Injectable Manufacturing",
+    "location": "Karakapatla, Hyderabad, Telangana",
+    "recipient": "mahesh.e@aspiropharma.com",
+    "historicalExclusion": false
+  },
+  {
     "messageId": "1a019d5cb982262e",
     "sentAt": 1787139780000,
     "employer": "Indoco Remedies",
@@ -408,6 +417,20 @@ export const applicationRecords = [
   }
 ] as const;
 export const runRecords = [
+  {
+    "id": "audit-run-18",
+    "label": "Verified Production, Manufacturing and Biotechnology run — 21 August 2026 (09:06 IST)",
+    "date": "21 Aug 2026 (IST)",
+    "reviewed": 17,
+    "sent": 1,
+    "decision": "One personalized résumé-backed application was sent to Aspiro Pharma after empty recipient-level and company-level Gmail duplicate checks. The message transparently disclosed Balaji's Diploma in Biotechnology, OSD-only production background, immediate availability and willingness to transition to sterile manufacturing. Sixteen other current leads were safely excluded for qualification or experience mismatch, functional mismatch, absent/incomplete role or email evidence, prior contact, an unconfirmed prior Ciron delivery safeguard, or expiring event timing. The permanent exclusion remained untouched.",
+    "sources": [
+      "https://pharmajobalert.in/aspiro-pharma-ltd-walk-in-drive-23-august-2026-itidiplomabscmscbpharmmpharmb-tech-for-multiple-positions/",
+      "https://pharmastuff.org/job/ciron-drugs-walk-in-interview-qc-qa-production",
+      "https://pharmajobalert.in/jubilant-generics-ltd-walk-in-on-22nd-23rd-aug-2026-iti-diploma-102-m-sc-b-sc-b-pharm-m-pharm-for-multiple-positions/",
+      "https://pharmajobalert.in/aarti-pharmalabs-ltd-walk-in-on-23rd-august-2026-sunday-for-multiple-positions/"
+    ]
+  },
   {
     "id": "audit-run-17",
     "label": "Verified Production and Manufacturing follow-up run — 20 August 2026 (17:13 IST)",
