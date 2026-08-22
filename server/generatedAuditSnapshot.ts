@@ -418,6 +418,21 @@ export const applicationRecords = [
 ] as const;
 export const runRecords = [
   {
+    "id": "audit-run-20",
+    "label": "Scheduled verified Production, Manufacturing and Biotechnology run — 22 August 2026 (09:07 IST)",
+    "date": "22 Aug 2026 (IST)",
+    "reviewed": 7,
+    "sent": 0,
+    "decision": "No application was sent. Apitoria, FDC, Pinnacle, Sun Pharma, Maithri Drugs, Eugia and Vamsi Labs were safely excluded for stated qualification or experience mismatch, sterile/API functional mismatch, absent explicit email route, role-scope mismatch, or an earlier delayed delivery/duplicate safeguard. The permanent exclusion remained untouched.",
+    "sources": [
+      "https://pharmawisdom.co.in/fdc-limited-walk-in-interviews-22nd-aug-2026/",
+      "https://pharmawisdom.co.in/pinnacle-life-science-walk-in-on-23rd-aug-2026/",
+      "https://pharmawisdom.co.in/maithri-drugs-walk-in-interviews-on-23rd-aug-2026/",
+      "https://pharmawisdom.co.in/eugia-pharma-walk-ins-for-qa-ipqa-production-departments-on-23rd-aug-2026/",
+      "https://pharmawisdom.co.in/vamsi-labs-ltd-walk-in-interviews-on-22nd-24th-aug-2026/"
+    ]
+  },
+  {
     "id": "audit-run-19",
     "label": "Verified Production, Manufacturing and Biotechnology follow-up — 21 August 2026 (17:08 IST)",
     "date": "21 Aug 2026 (IST)",
