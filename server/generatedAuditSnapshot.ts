@@ -418,6 +418,20 @@ export const applicationRecords = [
 ] as const;
 export const runRecords = [
   {
+    "id": "audit-run-21",
+    "label": "Scheduled evening verified Production, Manufacturing and Biotechnology run — 22 August 2026 (17:08 IST)",
+    "date": "22 Aug 2026 (IST)",
+    "reviewed": 5,
+    "sent": 0,
+    "decision": "No application was sent. SRF, Bharat Parenterals, Milán Laboratories, Indoco Remedies and Imperium Engineering were safely excluded for stated education or experience mismatch, absent verifiable email or employer evidence, expired/unclear currentness, or recipient/company duplicate protection. The permanent exclusion remained untouched.",
+    "sources": [
+      "https://pharmabharat.com/bharat-parenterals-is-hiring-for-engineering-administration-purchase-regulatory-affairs-qc-qa-rd-production/",
+      "https://pharmastuff.org/job/milan-laboratories-walk-in-interview-pharma-jobs",
+      "https://pharmabharat.com/indoco-remedies-is-hiring-for-production-osd-tablet-packing-manufacturing/",
+      "https://www.pharmatutor.org/content/august-2026/indoco-remedies-interview-pharma-jobs-in-production-department"
+    ]
+  },
+  {
     "id": "audit-run-20",
     "label": "Scheduled verified Production, Manufacturing and Biotechnology run — 22 August 2026 (09:07 IST)",
     "date": "22 Aug 2026 (IST)",
