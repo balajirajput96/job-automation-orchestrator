@@ -2,6 +2,15 @@
 export const auditSource = "/home/ubuntu/job_search_findings.md";
 export const applicationRecords = [
   {
+    "messageId": "1a02e6d8a5204e76",
+    "sentAt": 1787485320000,
+    "employer": "Athulitha Laboratories Private Limited",
+    "role": "Production Operator",
+    "location": "Jeedimetla, Hyderabad, Telangana",
+    "recipient": "hr@athulitha.com",
+    "historicalExclusion": false
+  },
+  {
     "messageId": "1a02cb3b42e0daa0",
     "sentAt": 1787456340000,
     "employer": "Ajanta Pharma",
@@ -426,6 +435,18 @@ export const applicationRecords = [
   }
 ] as const;
 export const runRecords = [
+  {
+    "id": "audit-run-23",
+    "label": "Scheduled evening verified Production, Manufacturing and Biotechnology run — 23 August 2026 (17:12 IST)",
+    "date": "23 Aug 2026 (IST)",
+    "reviewed": 3,
+    "sent": 1,
+    "decision": "One personalized résumé-backed Athulitha Laboratories Production Operator application was sent after current source, stated any-qualification eligibility, recipient-level and company-level Gmail duplicate checks passed. Bharat Parenterals was excluded for stated qualification mismatch and absent email route, while Apitoria was excluded for past-date status, education/API functional mismatch and absent current email. The permanent exclusion remained untouched.",
+    "sources": [
+      "https://pharmawisdom.co.in/athulitha-laboratories-walk-in-interviews-on-23rd-to-31st-aug-2026/",
+      "https://pharmawisdom.co.in/bharat-parenterals-limited-walk-in-on-24th-25th-aug-2026/"
+    ]
+  },
   {
     "id": "audit-run-22",
     "label": "Scheduled verified Production, Manufacturing and Biotechnology run — 23 August 2026 (09:09 IST)",
