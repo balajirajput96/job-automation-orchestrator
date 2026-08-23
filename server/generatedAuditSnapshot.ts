@@ -2,6 +2,15 @@
 export const auditSource = "/home/ubuntu/job_search_findings.md";
 export const applicationRecords = [
   {
+    "messageId": "1a02cb3b42e0daa0",
+    "sentAt": 1787456340000,
+    "employer": "Ajanta Pharma",
+    "role": "Manufacturing/Packing Associate/Operator",
+    "location": "Dahej, Gujarat",
+    "recipient": "referral.dhj@ajantapharma.com",
+    "historicalExclusion": false
+  },
+  {
     "messageId": "1a02263f0ae78ed7",
     "sentAt": 1787283370000,
     "employer": "Aspiro Pharma Ltd.",
@@ -417,6 +426,18 @@ export const applicationRecords = [
   }
 ] as const;
 export const runRecords = [
+  {
+    "id": "audit-run-22",
+    "label": "Scheduled verified Production, Manufacturing and Biotechnology run — 23 August 2026 (09:09 IST)",
+    "date": "23 Aug 2026 (IST)",
+    "reviewed": 2,
+    "sent": 1,
+    "decision": "One personalized résumé-backed Ajanta Pharma Manufacturing/Packing Associate/Operator application was sent after current source, role-fit, recipient-level and company-level Gmail duplicate checks passed. Cadila Pharmaceuticals API Production was excluded because the stated education and API functional experience requirements do not match the documented profile. The permanent exclusion remained untouched.",
+    "sources": [
+      "https://pharmastuff.org/job/ajanta-pharma-walk-in-interview-jobs",
+      "https://pharmawisdom.co.in/cadila-pharmaceuticals-walk-in-on-23rd-aug-2026/"
+    ]
+  },
   {
     "id": "audit-run-21",
     "label": "Scheduled evening verified Production, Manufacturing and Biotechnology run — 22 August 2026 (17:08 IST)",
