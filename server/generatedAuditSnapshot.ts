@@ -436,6 +436,19 @@ export const applicationRecords = [
 ] as const;
 export const runRecords = [
   {
+    "id": "audit-run-25",
+    "label": "Scheduled evening verified Production, Manufacturing and Biotechnology run — 24 August 2026 (17:03 IST)",
+    "date": "24 Aug 2026 (IST)",
+    "reviewed": 4,
+    "sent": 0,
+    "decision": "No application was sent. Zenotech Laboratories, Cohance Lifesciences, Vasant Chemicals and Cipla were safely excluded for incomplete role-level eligibility evidence, biologics-versus-OSD functional uncertainty, stated education mismatch, QR/mobile-only application paths, or absent published email routes. The permanent exclusion remained untouched.",
+    "sources": [
+      "https://pharmacareer.in/zenotech-laboratories-ltd-a-sun-pharma-group-hiring-for-qaqcqc-microengineeringproduction/",
+      "https://pharmacareer.in/cohance-lifesciences-walk-in-interview-30th-aug-for-multiple-positions/",
+      "https://pharmacareer.in/walk-in-interview-on-august-29-2026-saturday-for-multiple-positions-at-vasant-chemicals-pvt-ltd/"
+    ]
+  },
+  {
     "id": "audit-run-24",
     "label": "Scheduled verified Production, Manufacturing and Biotechnology run — 24 August 2026 (09:10 IST)",
     "date": "24 Aug 2026 (IST)",

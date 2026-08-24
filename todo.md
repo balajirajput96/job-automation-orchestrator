@@ -116,3 +116,4 @@
 - [x] Synchronize scheduled audit-run-22 verified Ajanta application and no-send screening outcomes with the dashboard snapshot and regression coverage for the 47-application, 22-run dataset.
 - [x] Synchronize scheduled evening audit-run-23 verified Athulitha application and no-send screening outcomes with the dashboard snapshot and regression coverage for the 48-application, 23-run dataset.
 - [x] Synchronize scheduled audit-run-24 no-send outcome with the dashboard snapshot and regression coverage for the 48-application, 24-run dataset.
+- [x] Synchronize scheduled evening audit-run-25 no-send outcome with the dashboard snapshot and regression coverage for the 48-application, 25-run dataset.
