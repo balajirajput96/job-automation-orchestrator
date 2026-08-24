@@ -436,6 +436,19 @@ export const applicationRecords = [
 ] as const;
 export const runRecords = [
   {
+    "id": "audit-run-24",
+    "label": "Scheduled verified Production, Manufacturing and Biotechnology run — 24 August 2026 (09:10 IST)",
+    "date": "24 Aug 2026 (IST)",
+    "reviewed": 5,
+    "sent": 0,
+    "decision": "No application was sent. Godrej Chemicals, NOCIL, Aarnea Biodome, Ichor Biologics and Haleos Labs were safely excluded for stated education, experience or role mismatch, API functional requirements, absent current email evidence, past-date status, incomplete qualification evidence, or prior company/role outreach. The permanent exclusion remained untouched.",
+    "sources": [
+      "https://www.jobavailables.com/2026/08/godrej-chemicals-walk-in-interview-on.html",
+      "https://www.jobavailables.com/2026/08/aarnea-biodome-hiring-for-production.html",
+      "https://www.linkedin.com/posts/chemical-job_nocil-limited-hiring-for-production-utility-activity-7497278498517041153-r2SD"
+    ]
+  },
+  {
     "id": "audit-run-23",
     "label": "Scheduled evening verified Production, Manufacturing and Biotechnology run — 23 August 2026 (17:12 IST)",
     "date": "23 Aug 2026 (IST)",
