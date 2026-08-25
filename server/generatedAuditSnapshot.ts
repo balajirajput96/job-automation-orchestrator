@@ -436,6 +436,19 @@ export const applicationRecords = [
 ] as const;
 export const runRecords = [
   {
+    "id": "audit-run-27",
+    "label": "Scheduled evening verified Production, Manufacturing and Biotechnology run — 25 August 2026 (17:09 IST)",
+    "date": "25 Aug 2026 (IST)",
+    "reviewed": 9,
+    "sent": 0,
+    "decision": "No application was sent. Intas and Lupin had stated experience or degree requirements above the documented profile and no email route; Yogi and Cronus lacked role-level eligibility evidence; Apitoria, Zenotech, MSN, Bharat Parenterals and Sanozen published roles outside the Production/Manufacturing scope or incompatible education/functional criteria. The permanent exclusion remained untouched.",
+    "sources": [
+      "https://pharmastuff.org/job/intas-pharmaceuticals-walk-in-drive-2",
+      "https://www.biotecnika.org/2026/08/lupin-biotech-jobs-pune-executive-production-mammalian/",
+      "https://pharmacareer.in/immediate-joiners-freshers-experience-for-qaqcproductionrdetp-meeutilitymaintenance-at-yogi-intermediates-pvt-ltd/"
+    ]
+  },
+  {
     "id": "audit-run-26",
     "label": "Scheduled morning verified Production, Manufacturing and Biotechnology run — 25 August 2026 (09:08 IST)",
     "date": "25 Aug 2026 (IST)",
