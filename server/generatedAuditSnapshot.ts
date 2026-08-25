@@ -436,6 +436,19 @@ export const applicationRecords = [
 ] as const;
 export const runRecords = [
   {
+    "id": "audit-run-26",
+    "label": "Scheduled morning verified Production, Manufacturing and Biotechnology run — 25 August 2026 (09:08 IST)",
+    "date": "25 Aug 2026 (IST)",
+    "reviewed": 9,
+    "sent": 0,
+    "decision": "No application was sent. Exemed, Aarnea, Lactose, Lyfius, Neuland and Amneal had stated education or functional-experience mismatches; Maithri and Neuland lacked an email route; MSN lacked role-level evidence; and Lincoln was blocked by a substantially similar company-level Gmail history. The permanent exclusion remained untouched.",
+    "sources": [
+      "https://pharmabharat.org/exemed-pharmaceuticals-hiring-for-rd-production-quality-control/",
+      "https://www.facebook.com/LincolnPharmaceuticalsLimited/posts/-hiring-alert-mega-walk-in-drive-are-you-looking-for-exciting-career-opportuniti/",
+      "https://pharmacareer.in/amneal-pharmaceuticals-walk-in-on-30th-aug26-sunday-iti-diploma-d-pharma-b-sc-b-pharma-m-sc-freshers-experience/"
+    ]
+  },
+  {
     "id": "audit-run-25",
     "label": "Scheduled evening verified Production, Manufacturing and Biotechnology run — 24 August 2026 (17:03 IST)",
     "date": "24 Aug 2026 (IST)",
