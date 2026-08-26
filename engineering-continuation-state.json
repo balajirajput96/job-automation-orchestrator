@@ -3,10 +3,10 @@
   "mission": "Preserve and incrementally maintain the verified job-automation engineering environment without disrupting the active job-search workflow.",
   "maximumExecutionCycles": 2400,
   "latestExecution": {
-    "number": 2,
-    "timestamp": "2026-08-20T21:24:33Z",
+    "number": 3,
+    "timestamp": "2026-08-26T03:46:35Z",
     "repository": "balajirajput96/job-automation-orchestrator",
-    "task": "Manual validation of the hourly GitHub maintenance workflow",
+    "task": "Diagnosis of runnerless GitHub Actions failures across hourly maintenance and dashboard verification workflows",
     "workflow": "Hourly deterministic maintenance",
     "usedCapabilities": [
       "Git",
@@ -16,18 +16,18 @@
       "Node.js"
     ],
     "action": "hourly-deterministic-maintenance",
-    "result": "completed",
-    "failureCategory": null,
-    "recoveryAttempt": 1,
-    "validationStatus": "verified",
-    "remainingBlocker": null,
-    "nextRecommendedAction": "Allow the hourly GitHub maintenance workflow to continue; preserve the separate twice-daily job-search schedule."
+    "result": "blocked",
+    "failureCategory": "github-hosted-runner-unavailable-before-step-start",
+    "recoveryAttempt": 2,
+    "validationStatus": "local-only-verified",
+    "remainingBlocker": "GitHub Actions jobs fail before any runner is assigned, job step starts, or log is created; this affects both hourly maintenance and dashboard verification workflows.",
+    "nextRecommendedAction": "Preserve the separate twice-daily job-search schedule. On the GitHub account, inspect Actions usage or hosted-runner availability before attempting another workflow repair."
   },
   "repository": {
     "name": "balajirajput96/job-automation-orchestrator",
     "path": "/home/ubuntu/job-automation-orchestrator",
     "branch": "main",
-    "head": "0d15f137dd838d2a591af44abeec807f380e935d",
+    "head": "c3e221d1da41bef18007b38b0b812fe94b99f92b",
     "remotes": [
       "origin",
       "github"
@@ -36,7 +36,7 @@
       "tags": 0,
       "stashes": 0,
       "recentReflogVerified": true,
-      "latestCheckpoint": "manus-webdev://e357ae05"
+      "latestCheckpoint": "manus-webdev://c3e221d1"
     }
   },
   "validatedCapabilities": [
@@ -57,8 +57,8 @@
     },
     {
       "component": "Current dashboard validation",
-      "status": "passed",
-      "evidence": "TypeScript, 15 Vitest tests, production build, and GitHub Actions run 32419716887"
+      "status": "local-passed",
+      "evidence": "TypeScript, 16 Vitest tests, production build, diff check, and direct development entry-module request passed. GitHub Actions runner assignment is currently blocked before any workflow step begins."
     }
   ],
   "existingAutomation": [
@@ -121,6 +121,11 @@
       "category": "availableCliCoverage",
       "status": "bounded",
       "detail": "Git, GitHub CLI and Google Workspace CLI are available and verified. Gemini, Antigravity, Jules and Datadog CLIs are not installed, so no unsupported integration is claimed."
+    },
+    {
+      "category": "githubActionsRunnerAvailability",
+      "status": "blocked",
+      "detail": "On 26 August 2026, scheduled and manually dispatched hourly maintenance runs plus dashboard verification runs failed before runner assignment or step creation. Repository Actions policy is enabled and allows all actions; GitHub Actions usage details require account-side access."
     }
   ],
   "secretsRecorded": false

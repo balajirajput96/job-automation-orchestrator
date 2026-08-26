@@ -13,14 +13,14 @@ const state = JSON.parse(
 };
 
 describe("engineering continuation state", () => {
-  it("records a bounded, recoverable and secret-free initial execution", () => {
+  it("records the latest bounded, recoverable and secret-free execution state", () => {
     expect(state.maximumExecutionCycles).toBe(2400);
     expect(state.latestExecution).toMatchObject({
-      number: 2,
+      number: 3,
       action: "hourly-deterministic-maintenance",
-      validationStatus: "verified",
-      failureCategory: null,
-      recoveryAttempt: 1,
+      validationStatus: "local-only-verified",
+      failureCategory: "github-hosted-runner-unavailable-before-step-start",
+      recoveryAttempt: 2,
     });
     expect(state.latestExecution.usedCapabilities).toContain("GitHub Actions");
     expect(state.existingAutomation).toContainEqual(
