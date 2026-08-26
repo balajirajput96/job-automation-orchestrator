@@ -127,10 +127,11 @@
       "status": "blocked",
       "detail": "On 26 August 2026, scheduled and manually dispatched hourly maintenance runs plus dashboard verification runs failed before runner assignment or step creation. Repository Actions policy is enabled and allows all actions; GitHub Actions usage details require account-side access.",
       "evidence": {
-        "affectedRunIds": [32927623097, 32927715881, 32927638603, 32927823339, 32928026392],
+        "affectedRunIds": [32927623097, 32927715881, 32927638603, 32927823339, 32928026392, 32929351628],
         "observedPattern": "Jobs complete as failed with zero runner ID, zero steps, no job logs, and BlobNotFound from the job-log endpoint.",
+        "currentRecoveryRun": "Dashboard verification run 32929351628 remained queued without a runner during extended monitoring.",
         "externalReference": "https://github.com/orgs/community/discussions/203003",
-        "externalFinding": "Independent jobs that fail before setup with no logs can indicate Actions runner provisioning or log-storage infrastructure failure; fresh workflow dispatch and GitHub Support escalation are recommended if the pattern persists."
+        "externalFinding": "Independent jobs that fail before setup with no logs can indicate Actions runner provisioning or log-storage infrastructure failure; fresh workflow dispatch and GitHub Support escalation are recommended if the pattern persists. The external discussion specifically notes that workflow YAML cannot create logs when runner provisioning or log storage fails before setup."
       }
     }
   ],
