@@ -121,3 +121,4 @@
 - [x] Complete safeguarded audit-run-27 research, application decision, audit reconciliation, and dashboard regression validation.
 - [x] Complete safeguarded audit-run-28 research, application decision, audit reconciliation, and dashboard regression validation.
 - [x] Restore development Vite entry-module resolution after the function-based configuration update.
+- [ ] Diagnose and restore successful hourly deterministic maintenance workflow execution after the current scheduled-run failures (runnerless job failures on 26 August; no job steps or logs were created).
