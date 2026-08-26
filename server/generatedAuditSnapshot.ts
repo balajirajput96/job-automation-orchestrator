@@ -436,6 +436,19 @@ export const applicationRecords = [
 ] as const;
 export const runRecords = [
   {
+    "id": "audit-run-28",
+    "label": "Scheduled morning verified Production, Manufacturing and Biotechnology run — 26 August 2026 (09:12 IST)",
+    "date": "26 Aug 2026 (IST)",
+    "reviewed": 9,
+    "sent": 0,
+    "decision": "No application was sent. Aspiro was functionally and tenure-aligned but had no email route; Intas required at least three years of OSD experience; Sipra, Trelleborg and UPL lacked an eligible role or applicable route; and Aneta, Macleods, Vital and Yogi lacked sufficient role-level or published-email evidence. The permanent exclusion remained untouched.",
+    "sources": [
+      "https://pharmacareer.in/aspiro-pharma-walk-in-drive-28th-august-2026-b-pharmacy-m-pharmacy-diploma-b-sc-b-com-iti-for-multiple-positions/",
+      "https://pharmastuff.org/job/sipra-labs-walk-in-interview-jobs",
+      "https://pharmastuff.org/job/intas-pharmaceuticals-walk-in-drive-2"
+    ]
+  },
+  {
     "id": "audit-run-27",
     "label": "Scheduled evening verified Production, Manufacturing and Biotechnology run — 25 August 2026 (17:09 IST)",
     "date": "25 Aug 2026 (IST)",

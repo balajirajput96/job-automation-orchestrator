@@ -119,3 +119,5 @@
 - [x] Synchronize scheduled evening audit-run-25 no-send outcome with the dashboard snapshot and regression coverage for the 48-application, 25-run dataset.
 - [x] Complete safeguarded audit-run-26 research, application decision, audit reconciliation, and dashboard regression validation.
 - [x] Complete safeguarded audit-run-27 research, application decision, audit reconciliation, and dashboard regression validation.
+- [x] Complete safeguarded audit-run-28 research, application decision, audit reconciliation, and dashboard regression validation.
+- [x] Restore development Vite entry-module resolution after the function-based configuration update.
