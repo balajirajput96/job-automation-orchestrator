@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   validate:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Respect the 2,400-cycle maintenance window
         shell: bash
